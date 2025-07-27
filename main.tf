@@ -5,11 +5,11 @@ provider "aws" {
 
 locals {
   name   = "research-cluster"
-  kubernetes_version = "1.31"
+  kubernetes_version = "1.32"
   region = "us-east-1"
 
   vpc_cidr = "10.0.0.0/16"
-  public_ip = "IP público/32" # IP público para acesso ao MySQL https://ifconfig.me
+  public_ip = "IP_PUBLICO/32" # IP público para acesso ao MySQL https://ifconfig.me
   azs      = ["us-east-1a", "us-east-1b"]
 
   public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -112,22 +112,22 @@ resource "local_file" "mysql_ssh_key" {
 # Módulo para criar o cluster EKS
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "21.0.4"
+  version = "~> 21.0"
 
   name                   = local.name
   kubernetes_version     = local.kubernetes_version
   endpoint_public_access = true
+  enable_cluster_creator_admin_permissions = true
   
 
   addons = {
-    coredns = {
-      most_recent = true
+    coredns                = {}
+    eks-pod-identity-agent = {
+      before_compute = true
     }
-    kube-proxy = {
-      most_recent = true
-    }
-    vpc-cni = {
-      most_recent = true
+    kube-proxy             = {}
+    vpc-cni                = {
+      before_compute = true
     }
   }
 
