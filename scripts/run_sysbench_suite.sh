@@ -28,7 +28,7 @@ case "$SCALE" in
   alta)  TABLE_SIZE=10000000 ;;
 esac
 
-OUT_DIR="${BENCHMARK_RESULTS}/local/sysbench/${ENGINE}/${SCALE}"
+OUT_DIR="${BENCHMARK_RESULTS}/local/${ENGINE}/${SCALE}"
 mkdir -p "$OUT_DIR"
 
 # prepare (cria e popula as tabelas)
