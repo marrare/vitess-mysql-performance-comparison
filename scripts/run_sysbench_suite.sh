@@ -23,10 +23,13 @@ case "$ENGINE" in
 esac
 
 case "$SCALE" in
-  baixa) TABLE_SIZE=100000 ;;
-  media) TABLE_SIZE=1000000 ;;
-  alta)  TABLE_SIZE=10000000 ;;
+  baixa) TABLE_SIZE=10000 ;;
+  media) TABLE_SIZE=100000 ;;
+  alta)  TABLE_SIZE=1000000 ;;
 esac
+
+
+BENCHMARK_RESULTS=/home/marciliosantos/tcc/vitess-mysql-performance-comparison/sysbench/results
 
 OUT_DIR="${BENCHMARK_RESULTS}/local/${ENGINE}/${SCALE}"
 mkdir -p "$OUT_DIR"
