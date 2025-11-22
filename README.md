@@ -112,11 +112,11 @@ mysql> show tables;
 
 # 8. Tabela de mapeamento
 
-| Nível | Sysbench (oltp_read_write)           | BenchBase (TPC-C)                  |
-| ----- | ------------------------------------ | ---------------------------------- |
-| Baixa | 10 tabelas × 100k linhas, 50 threads | 1 warehouse, 10 terminais, 60s     |
-| Média | 10 tabelas × 1M linhas, 50 threads   | 10 warehouses, 50 terminais, 120s  |
-| Alta  | 10 tabelas × 10M linhas, 50 threads  | 100 warehouses, 100 terminais, 180s |
+| Nível | Sysbench (oltp_read_write)           | BenchBase (TPC-C)                   |
+| ----- | ------------------------------------ | ----------------------------------- |
+| Baixa | 10 tabelas × 10k linhas, 50 threads  | 1 warehouse, 10 terminais, 60s      |
+| Média | 10 tabelas × 100K linhas, 50 threads | 10 warehouses, 50 terminais, 120s   |
+| Alta  | 10 tabelas × 1M linhas, 50 threads   | 100 warehouses, 100 terminais, 180s |
 
 ## 9. Deve-se deixar claro que:
 
