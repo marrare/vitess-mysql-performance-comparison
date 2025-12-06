@@ -13,4 +13,4 @@ vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest9;" ben
 vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest10;" benchmark; sleep 1;
 
 # MySQL drop tables;
-echo "set 'benchpass'"; docker exec -it mysql-benchmark mysql -u benchuser -P 3306 -h 127.0.0.1 -p benchmark -e "DROP DATABASE IF EXISTS benchmark; CREATE DATABASE benchmark;";
+docker exec -it mysql-benchmark mysql -u root -P 3306 -h 127.0.0.1 -p benchmark -e "DROP DATABASE IF EXISTS benchmark; CREATE DATABASE benchmark;";

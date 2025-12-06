@@ -15,6 +15,11 @@ services:
       - --collation-server=utf8mb4_unicode_ci
     volumes:
       - mysql_data_benchmark:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+
+networks:
+  benchmark-net:
+    driver: bridge
 
 volumes:
   mysql_data_benchmark:
