@@ -4,6 +4,7 @@ set -e
 
 ENGINE=$1          # mysql ou vitess
 SCALE=$2           # baixa, media, alta
+ENVIRONMENT=$3     # local ou aws
 
 case "$ENGINE" in
   mysql)
@@ -29,9 +30,9 @@ case "$SCALE" in
 esac
 
 
-BENCHMARK_RESULTS=/home/marciliosantos/tcc/vitess-mysql-performance-comparison/sysbench/results
+BENCHMARK_RESULTS=../sysbench/results
 
-OUT_DIR="${BENCHMARK_RESULTS}/local/${ENGINE}/${SCALE}"
+OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}"
 mkdir -p "$OUT_DIR"
 
 # prepare (cria e popula as tabelas)

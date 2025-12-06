@@ -2,7 +2,7 @@
 set -e
 
 # 1) start a Minikube engine and create namespace vitess
-minikube start --kubernetes-version=v1.32.2 --cpus=4 --memory=11000 --disk-size=32g
+minikube start --kubernetes-version=v1.32.2 --cpus=4 --memory=11g --disk-size=32g
 
 kubectl create namespace vitess
 kubectl config set-context --current --namespace=vitess
@@ -23,5 +23,5 @@ kubectl apply -f ~/vitess/examples/operator/101_initial_cluster.yaml
 sleep 5; kubectl get pods -n vitess
 
 # 5) Docker Compose Up MySQL
-docker compose -f ~/BENCHMARK_LOCAL/configs/docker-compose.yml up -d;
-docker compose -f ~/docker-compose.yml ps;
+# docker compose -f ~/BENCHMARK_LOCAL/configs/docker-compose.yml up -d;
+# docker compose -f ~/docker-compose.yml ps;

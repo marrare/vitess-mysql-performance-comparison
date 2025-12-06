@@ -1,0 +1,148 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 50
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function faFATAL: Thread initialization failed!
+.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: Thread initialization failed!
+ver on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbFATAL: Thread initialization failed!
+creation failed
+FATAL: Thread initialization failed!
+ver on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbFATAL: Thread initialization failed!
+creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: Thread initialization failed!
+ /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function faFATAL: Thread initialization failed!
+.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: Thread initialization failed!
+ver on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: Thread initialization failed!
+ /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: unable to connect to MySQL server on host '127.0.0.1', port 3307, aborting...
+FATAL: error 1040: Too many connections
+FATAL: `thread_init' function failed: /usr/share/sysbench/oltp_common.lua:349: connection creation failed
+FATAL: Thread initialization failed!
