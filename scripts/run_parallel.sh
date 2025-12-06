@@ -146,4 +146,23 @@ sysbench oltp_read_write \
   cleanup >/dev/null 2>&1
 
 wait
-echo "Todos os finalizaram"
+echo "Iniciando processamento dos logs..."
+
+for file in "$OUT_DIR"/*; do
+
+    filename=$(basename "$file")
+    NAME_ONLY="${filename%.*}"
+
+    if [[ "$file" == *.csv ]] || [[ -d "$file" ]]; then
+        continue
+    fi
+
+    python3 parse_sysbench.py \
+        --file "$file" \
+        --db "$ENGINE" \
+        --type  "$NAME_ONLY" \
+        --output "$OUT_DIR/resultados.csv"
+
+done
+
+echo "Tudo pronto! CSV gerado."
