@@ -6,7 +6,7 @@ echo $MYSQL_USER
 ENGINE=$1          # mysql ou vitess
 SCALE=$2           # baixa, media, alta
 ENVIRONMENT=$3     # local ou aws
-PARALLEL=2
+SEQUENCIAL=2
 
 case "$ENGINE" in
   mysql)
@@ -32,7 +32,7 @@ case "$SCALE" in
 esac
 
 BENCHMARK_RESULTS=../sysbench/results
-OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}/parallel"
+OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}/sequencial"
 mkdir -p "$OUT_DIR"
 
 # prepare (cria e popula as tabelas)
@@ -50,7 +50,7 @@ wait
 echo "Banco de dados preparado."
 
 # read
-for i in $(seq 1 $PARALLEL); do
+for i in $(seq 1 $SEQUENCIAL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste read_$i"
     sysbench oltp_read_only \
   --mysql-db=$DB \
@@ -62,12 +62,12 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado" &
+  run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado"
 done
 wait
 
 # write
-for i in $(seq 1 $PARALLEL); do
+for i in $(seq 1 $SEQUENCIAL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste write_$i"
     sysbench oltp_write_only \
   --mysql-db=$DB \
@@ -79,12 +79,12 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado" &
+  run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado"
 done
 wait
 
 # update
-for i in $(seq 1 $PARALLEL); do
+for i in $(seq 1 $SEQUENCIAL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste update_$i"
     sysbench oltp_update_index \
   --mysql-db=$DB \
@@ -96,12 +96,12 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado" &
+  run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado"
 done
 wait
 
 # delete
-for i in $(seq 1 $PARALLEL); do
+for i in $(seq 1 $SEQUENCIAL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste delete_$i"
     sysbench oltp_delete \
   --mysql-db=$DB \
@@ -113,12 +113,12 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado" &
+  run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado"
 done
 wait
 
 # complex (read+write)
-for i in $(seq 1 $PARALLEL); do
+for i in $(seq 1 $SEQUENCIAL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste complex_$i"
     sysbench oltp_read_write \
   --mysql-db=$DB \
@@ -130,7 +130,7 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  run > "$OUT_DIR/complex_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste complex_$i finalizado" &
+  run > "$OUT_DIR/complex_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste complex_$i finalizado"
 done
 wait
 
