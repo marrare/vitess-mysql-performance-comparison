@@ -109,26 +109,6 @@ wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/update.txt"
 
-# delete
-INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-for i in $(seq 1 $SEQUENCIAL); do
-    echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste delete_$i"
-    sysbench oltp_delete \
-  --mysql-db=$DB \
-  --mysql-host=$HOST \
-  --mysql-password=$PASSWORD \
-  --mysql-port=$PORT \
-  --mysql-user=$USER \
-  --tables=10 \
-  --table-size=$TABLE_SIZE \
-  --threads=50 \
-  --time=60 \
-  run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado"
-done
-wait
-FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
-
 # complex (read+write)
 INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 for i in $(seq 1 $SEQUENCIAL); do
@@ -148,6 +128,26 @@ done
 wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/complex.txt"
+
+# delete
+INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+for i in $(seq 1 $SEQUENCIAL); do
+    echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste delete_$i"
+    sysbench oltp_delete \
+  --mysql-db=$DB \
+  --mysql-host=$HOST \
+  --mysql-password=$PASSWORD \
+  --mysql-port=$PORT \
+  --mysql-user=$USER \
+  --tables=10 \
+  --table-size=$TABLE_SIZE \
+  --threads=50 \
+  --time=60 \
+  run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado"
+done
+wait
+FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
 
 # cleanup (drop tables)
 sysbench oltp_read_write \

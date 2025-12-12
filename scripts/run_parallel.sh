@@ -50,6 +50,7 @@ wait
 echo "Banco de dados preparado."
 
 # read
+INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste read_$i"
     sysbench oltp_read_only \
@@ -65,8 +66,11 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado" &
 done
 wait
+FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/read.txt"
 
 # write
+INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste write_$i"
     sysbench oltp_write_only \
@@ -82,8 +86,11 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado" &
 done
 wait
+FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
 
 # update
+INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste update_$i"
     sysbench oltp_update_index \
@@ -99,25 +106,11 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado" &
 done
 wait
-
-# delete
-for i in $(seq 1 $PARALLEL); do
-    echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste delete_$i"
-    sysbench oltp_delete \
-  --mysql-db=$DB \
-  --mysql-host=$HOST \
-  --mysql-password=$PASSWORD \
-  --mysql-port=$PORT \
-  --mysql-user=$USER \
-  --tables=10 \
-  --table-size=$TABLE_SIZE \
-  --threads=50 \
-  --time=60 \
-  run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado" &
-done
-wait
+FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/update.txt"
 
 # complex (read+write)
+INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste complex_$i"
     sysbench oltp_read_write \
@@ -133,6 +126,28 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/complex_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste complex_$i finalizado" &
 done
 wait
+FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/complex.txt"
+
+# delete
+INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+for i in $(seq 1 $PARALLEL); do
+    echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste delete_$i"
+    sysbench oltp_delete \
+  --mysql-db=$DB \
+  --mysql-host=$HOST \
+  --mysql-password=$PASSWORD \
+  --mysql-port=$PORT \
+  --mysql-user=$USER \
+  --tables=10 \
+  --table-size=$TABLE_SIZE \
+  --threads=50 \
+  --time=60 \
+  run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado" &
+done
+wait
+FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
 
 # cleanup (drop tables)
 sysbench oltp_read_write \
