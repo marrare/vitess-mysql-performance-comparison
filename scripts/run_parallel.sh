@@ -45,7 +45,11 @@ sysbench oltp_read_write \
   --mysql-user=$USER \
   --tables=10 \
   --table-size=$TABLE_SIZE \
+  --db-ps-mode=disable \
+  --auto_inc=false \
+  --create_secondary=false \
   prepare
+
 wait
 echo "Banco de dados preparado."
 
@@ -62,6 +66,8 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
+  --auto_inc=false \
+  --create_secondary=false \
   run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado" &
 done
 wait
@@ -79,6 +85,8 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
+  --auto_inc=false \
+  --create_secondary=false \
   run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado" &
 done
 wait
@@ -96,6 +104,8 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
+  --auto_inc=false \
+  --create_secondary=false \
   run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado" &
 done
 wait
@@ -113,6 +123,8 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
+  --auto_inc=false \
+  --create_secondary=false \
   run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado" &
 done
 wait
@@ -130,6 +142,8 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
+  --auto_inc=false \
+  --create_secondary=false \
   run > "$OUT_DIR/complex_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste complex_$i finalizado" &
 done
 wait
@@ -143,6 +157,8 @@ sysbench oltp_read_write \
   --mysql-user=$USER \
   --tables=10 \
   --table-size=$TABLE_SIZE \
+  --auto_inc=false \
+  --create_secondary=false \
   cleanup >/dev/null 2>&1
 
 wait
@@ -161,7 +177,8 @@ for file in "$OUT_DIR"/*; do
         --file "$file" \
         --db "$ENGINE" \
         --type  "$NAME_ONLY" \
-        --output "$OUT_DIR/resultados.csv"
+        --scale  "$SCALE" \
+        --output "$BENCHMARK_RESULTS/resultados.csv"
 
 done
 
