@@ -79,7 +79,7 @@ def append_to_csv(data, output_csv='resultados_tcc.csv'):
         
         writer.writerow(data)
     
-    print(f"Sucesso! Dados de '{data['database']}' adicionados ao CSV.")
+    print(f"[INFO] Resultado do teste {data['test_type']} ({data['database']}) processado.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Parser de Logs do Sysbench para CSV')
