@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -e
-export $(grep -v '^#' ../.env | xargs)
-echo $MYSQL_USER
 
-ENGINE=$1          # mysql ou vitess
-SCALE=$2           # baixa, media, alta
-ENVIRONMENT=$3     # local ou aws
+export $(grep -v '^#' ../.env | xargs)
+
+echo "***** RUNNING SEQUENCIAL BENCHMARKS WITH SYSBENCH *****"
+echo "ENGINE: $ENGINE"
+echo "SCALE: $SCALE"
+echo "ENVIRONMENT: $ENVIRONMENT"
 SEQUENCIAL=2
 
 case "$ENGINE" in
@@ -175,8 +176,8 @@ for file in "$OUT_DIR"/*; do
 
       NAME_WITHOUT_NUMBERS="${filename%_*}.txt"
       CONTENT=$(<"$OUT_DIR/$NAME_WITHOUT_NUMBERS")
-      START=$(echo "$CONTENT" | awk '{print $2 " " $3}')
-      END=$(echo "$CONTENT" | awk '{print $5 " " $6}')
+      START=$(echo "$CONTENT" | grep -oP 'Start: \K\S+ \S+')
+      END=$(echo "$CONTENT" | grep -oP 'End: \K\S+ \S+')
 
       python3 parse_sysbench.py \
         --file "$file" \
