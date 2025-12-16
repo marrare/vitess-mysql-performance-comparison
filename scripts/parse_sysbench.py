@@ -4,13 +4,15 @@ import sys
 import argparse
 import os
 
-def parse_sysbench_log(file_path, db_type, test_type, timestamp_start, timestamp_end):
+def parse_sysbench_log(file_path, db_type, test_type, scale, simultaneity, timestamp_start, timestamp_end):
     # Dicionário para armazenar os resultados
     data = {
         "timestamp_start": timestamp_start,
         "timestamp_end": timestamp_end,
         "database": db_type,
         "test_type": test_type,
+        "scale": scale,
+        "simultaneity": simultaneity,
         "total_time": 0,
         "threads": 0,
         "tps": 0,    # Transactions per second
@@ -66,7 +68,7 @@ def append_to_csv(data, output_csv='resultados_tcc.csv'):
     
     # Ordem das colunas
     fieldnames = [
-        "timestamp_start", "timestamp_end", "database", "test_type", "threads", 
+        "timestamp_start", "timestamp_end", "database", "test_type", "scale", "simultaneity", "threads", 
         "total_time", "tps", "qps", "lat_min", "lat_avg", "lat_max", "lat_95th"
     ]
 
@@ -85,11 +87,13 @@ if __name__ == "__main__":
     parser.add_argument('--file', required=True, help='Caminho do arquivo de log')
     parser.add_argument('--db', required=True, help='Nome do Banco (ex: MySQL, Vitess)')
     parser.add_argument('--type', required=True, help='Tipo de teste (ex: read, write, complex)')
+    parser.add_argument('--scale', required=True, help='Escala de carga (ex: baixa, media, alta)')
+    parser.add_argument('--simultaneity', required=True, help='Simultaneidade (ex: paralelo, sequencial)')
     parser.add_argument('--output', required=True, help='Arquivo CSV de saída (padrão: resultados_tcc.csv)')
     parser.add_argument('--start', required=True, help='Timestamp inicial da execução (opcional)')
     parser.add_argument('--end', required=True, help='Timestamp final da execução (opcional)')
     
     args = parser.parse_args()
 
-    parsed_data = parse_sysbench_log(args.file, args.db, args.type, args.start, args.end)
+    parsed_data = parse_sysbench_log(args.file, args.db, args.type, args.scale, args.simultaneity, args.start, args.end)
     append_to_csv(parsed_data, args.output)

@@ -205,7 +205,9 @@ for file in "$OUT_DIR"/*; do
         --file "$file" \
         --db "$ENGINE" \
         --type  "$NAME_ONLY" \
-        --output "$OUT_DIR/resultados.csv" \
+        --scale  "$SCALE" \
+        --simultaneity "paralelo" \
+        --output "$BENCHMARK_RESULTS/resultados.csv" \
         --start "$START" \
         --end "$END"
     fi
