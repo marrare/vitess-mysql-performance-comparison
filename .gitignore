@@ -44,3 +44,5 @@ kube-prometheus/
 
 # virtualenv
 venv/
+__pycache__
+**/.venv/
