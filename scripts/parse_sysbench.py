@@ -2,7 +2,6 @@ import re
 import csv
 import sys
 import argparse
-from datetime import datetime
 import os
 
 def parse_sysbench_log(file_path, db_type, test_type, timestamp_start, timestamp_end):
