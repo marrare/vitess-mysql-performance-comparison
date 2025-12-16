@@ -55,7 +55,7 @@ wait
 echo "Banco de dados preparado."
 
 # read
-INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+INITIALIZE_TIME=$(date --iso-8601=seconds)
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste read_$i"
     sysbench oltp_read_only \
@@ -73,11 +73,13 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado" &
 done
 wait
-FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/read.txt"
 
+sleep 30
+
 # write
-INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+INITIALIZE_TIME=$(date --iso-8601=seconds)
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste write_$i"
     sysbench oltp_write_only \
@@ -95,11 +97,13 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado" &
 done
 wait
-FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
 
+sleep 30
+
 # update
-INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+INITIALIZE_TIME=$(date --iso-8601=seconds)
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste update_$i"
     sysbench oltp_update_index \
@@ -117,11 +121,13 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado" &
 done
 wait
-FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/update.txt"
 
+sleep 30
+
 # complex (read+write)
-INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+INITIALIZE_TIME=$(date --iso-8601=seconds)
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste complex_$i"
     sysbench oltp_read_write \
@@ -139,11 +145,13 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/complex_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste complex_$i finalizado" &
 done
 wait
-FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/complex.txt"
 
+sleep 30
+
 # delete
-INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+INITIALIZE_TIME=$(date --iso-8601=seconds)
 for i in $(seq 1 $PARALLEL); do
     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste delete_$i"
     sysbench oltp_delete \
@@ -159,7 +167,7 @@ for i in $(seq 1 $PARALLEL); do
   run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado" &
 done
 wait
-FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
 
 # cleanup (drop tables)
@@ -190,8 +198,8 @@ for file in "$OUT_DIR"/*; do
 
       NAME_WITHOUT_NUMBERS="${filename%_*}.txt"
       CONTENT=$(<"$OUT_DIR/$NAME_WITHOUT_NUMBERS")
-      START=$(echo "$CONTENT" | grep -oP 'Start: \K\S+ \S+')
-      END=$(echo "$CONTENT" | grep -oP 'End: \K\S+ \S+')
+      START=$(echo "$CONTENT" | grep -oP 'Start:\s*\K.*')
+      END=$(echo "$CONTENT" | grep -oP 'End:\s*\K.*')
 
       python3 parse_sysbench.py \
         --file "$file" \
