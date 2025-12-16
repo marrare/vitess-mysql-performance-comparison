@@ -42,3 +42,5 @@ terraform.rc
 # Kube-prometheus
 kube-prometheus/
 
+# virtualenv
+venv/
