@@ -7771,7 +7771,7 @@ spec:
             - vitess-operator
           env:
             - name: WATCH_NAMESPACE
-              value: "default,example"
+              value: "default,example,vitess"
             - name: POD_NAME
               valueFrom:
                 fieldRef:

@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -e
-export $(grep -v '^#' ../.env | xargs)
-echo $MYSQL_USER
 
-ENGINE=$1          # mysql ou vitess
-SCALE=$2           # baixa, media, alta
-ENVIRONMENT=$3     # local ou aws
+export $(grep -v '^#' ../.env | xargs)
+
+echo "***** RUNNING PARALLEL BENCHMARKS WITH SYSBENCH *****"
+echo "ENGINE: $ENGINE"
+echo "SCALE: $SCALE"
+echo "ENVIRONMENT: $ENVIRONMENT"
 PARALLEL=2
 
 case "$ENGINE" in
@@ -73,7 +74,7 @@ for i in $(seq 1 $PARALLEL); do
 done
 wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/read.txt"
+echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/read.txt"
 
 # write
 INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
@@ -95,7 +96,7 @@ for i in $(seq 1 $PARALLEL); do
 done
 wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
+echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
 
 # update
 INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
@@ -117,7 +118,7 @@ for i in $(seq 1 $PARALLEL); do
 done
 wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/update.txt"
+echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/update.txt"
 
 # complex (read+write)
 INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
@@ -139,7 +140,7 @@ for i in $(seq 1 $PARALLEL); do
 done
 wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/complex.txt"
+echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/complex.txt"
 
 # delete
 INITIALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
@@ -159,7 +160,7 @@ for i in $(seq 1 $PARALLEL); do
 done
 wait
 FINALIZE_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
+echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
 
 # cleanup (drop tables)
 sysbench oltp_read_write \
@@ -175,24 +176,31 @@ sysbench oltp_read_write \
   cleanup >/dev/null 2>&1
 
 wait
+
 echo "Iniciando processamento dos logs..."
-
 for file in "$OUT_DIR"/*; do
-
-    filename=$(basename "$file")
-    NAME_ONLY="${filename%.*}"
-
     if [[ "$file" == *.csv ]] || [[ -d "$file" ]]; then
         continue
     fi
 
-    python3 parse_sysbench.py \
+    filename=$(basename "$file")
+    NAME_ONLY="${filename%.*}"
+
+    if [[ "$NAME_ONLY" =~ [0-9] ]]; then
+
+      NAME_WITHOUT_NUMBERS="${filename%_*}.txt"
+      CONTENT=$(<"$OUT_DIR/$NAME_WITHOUT_NUMBERS")
+      START=$(echo "$CONTENT" | grep -oP 'Start: \K\S+ \S+')
+      END=$(echo "$CONTENT" | grep -oP 'End: \K\S+ \S+')
+
+      python3 parse_sysbench.py \
         --file "$file" \
         --db "$ENGINE" \
         --type  "$NAME_ONLY" \
-        --scale  "$SCALE" \
-        --output "$BENCHMARK_RESULTS/resultados.csv"
-
+        --output "$OUT_DIR/resultados.csv" \
+        --start "$START" \
+        --end "$END"
+    fi
 done
 
 echo "Tudo pronto! CSV gerado."
