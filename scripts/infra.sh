@@ -96,8 +96,7 @@ else
   echo
 fi
 
-# Apply initial schema and vschema
-echo "***** APLICANDO SCHEMA E VSCHEMA INICIAIS *****"
+echo "***** APLICANDO SCHEMA INICIAIS *****"
 vtctldclient ApplySchema --sql-file="../dependencies/vitess/create_schema.sql" benchmark || echo "Falha ao aplicar schema"
 vtctldclient ApplyVSchema --vschema-file="../dependencies/vitess/vschema_sharded.json" benchmark || echo "Falha ao aplicar vschema"
 
