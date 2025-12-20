@@ -90,7 +90,7 @@ spec:
         instance-poll-time: 1s
     partitionings:
     - equal:
-        parts: 1 # shard
+        parts: 5 # shard
         shardTemplate:
           databaseInitScriptSecret:
             name: example-cluster-config
@@ -98,7 +98,7 @@ spec:
           tabletPools:
           - cell: zone1
             type: replica
-            replicas: 2 # tablets by shard
+            replicas: 3 # tablets by shard
             vttablet:
               extraFlags:
                 db-charset: utf8mb4

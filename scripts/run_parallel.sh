@@ -9,6 +9,8 @@ echo "SCALE: $SCALE"
 echo "ENVIRONMENT: $ENVIRONMENT"
 PARALLEL=5
 
+./run_cleanup.sh
+
 case "$ENGINE" in
   mysql)
     DB=$MYSQL_DATABASE
@@ -46,7 +48,6 @@ sysbench oltp_read_write \
   --mysql-user=$USER \
   --tables=10 \
   --table-size=$TABLE_SIZE \
-  --db-ps-mode=disable \
   --auto_inc=false \
   --create_secondary=false \
   prepare
@@ -169,21 +170,6 @@ done
 wait
 FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
-
-# cleanup (drop tables)
-sysbench oltp_read_write \
-  --mysql-db=$DB \
-  --mysql-host=$HOST \
-  --mysql-password=$PASSWORD \
-  --mysql-port=$PORT \
-  --mysql-user=$USER \
-  --tables=10 \
-  --table-size=$TABLE_SIZE \
-  --auto_inc=false \
-  --create_secondary=false \
-  cleanup >/dev/null 2>&1
-
-wait
 
 echo "Iniciando processamento dos logs..."
 for file in "$OUT_DIR"/*; do

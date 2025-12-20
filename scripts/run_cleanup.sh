@@ -2,28 +2,17 @@
 
 export $(grep -v '^#' ../.env | xargs)
 
+QUERY="use benchmark; TRUNCATE TABLE sbtest1; TRUNCATE TABLE sbtest2; TRUNCATE TABLE sbtest3; TRUNCATE TABLE sbtest4; TRUNCATE TABLE sbtest5; TRUNCATE TABLE sbtest6; TRUNCATE TABLE sbtest7; TRUNCATE TABLE sbtest8; TRUNCATE TABLE sbtest9; TRUNCATE TABLE sbtest10;"
+
 case "$ENGINE" in
   vitess)
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest1;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest2;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest3;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest4;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest5;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest6;" benchmark; sleep 1; 
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest7;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest8;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest9;" benchmark; sleep 1;
-    vtctldclient ApplySchema --ddl-strategy "vitess" --sql "DROP TABLE sbtest10;" benchmark; sleep 1;
+    mysql -u $VITESS_USER -P $VITESS_PORT -h $VITESS_HOST -p$VITESS_PASSWORD -e "$QUERY";                                  
     ;;
   mysql)
     if [ "$ENVIRONMENT" = "local" ]; then
-      docker exec -it mysql-benchmark mysql -u root -P $MYSQL_PORT -h $MYSQL_HOST -p benchmark -e "DROP DATABASE IF EXISTS benchmark; CREATE DATABASE benchmark;";
+      docker exec -it mysql-benchmark mysql -u root -P $MYSQL_PORT -h $MYSQL_HOST -p benchmark -e "$QUERY";
     else 
-      mysql -u root -P $MYSQL_PORT -h $MYSQL_HOST -p$MYSQL_ROOT_PASSWORD -e "DROP DATABASE IF EXISTS benchmark; CREATE DATABASE benchmark;";
+      mysql -u root -P $MYSQL_PORT -h $MYSQL_HOST -p$MYSQL_ROOT_PASSWORD -e "$QUERY";
     fi
     ;;
 esac
-
-# Vitess drop tables;
-
-# MySQL drop tables;

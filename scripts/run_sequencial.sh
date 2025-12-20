@@ -9,6 +9,8 @@ echo "SCALE: $SCALE"
 echo "ENVIRONMENT: $ENVIRONMENT"
 SEQUENCIAL=2
 
+./run_cleanup.sh
+
 case "$ENGINE" in
   mysql)
     DB=$MYSQL_DATABASE

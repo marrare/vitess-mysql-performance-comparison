@@ -97,9 +97,9 @@ else
 fi
 
 # Apply initial schema and vschema
-# echo "***** APLICANDO SCHEMA E VSCHEMA INICIAIS *****"
-# vtctldclient ApplySchema --sql-file="../dependencies/vitess/create_benchmark_schema.sql" benchmark || echo "Falha ao aplicar schema"
-# vtctldclient ApplyVSchema --vschema-file="../dependencies/vitess/vschema_benchmark_initial.json" benchmark || echo "Falha ao aplicar vschema"
+echo "***** APLICANDO SCHEMA E VSCHEMA INICIAIS *****"
+vtctldclient ApplySchema --sql-file="../dependencies/vitess/create_schema.sql" benchmark || echo "Falha ao aplicar schema"
+vtctldclient ApplyVSchema --vschema-file="../dependencies/vitess/vschema_sharded.json" benchmark || echo "Falha ao aplicar vschema"
 
 echo
 echo "Para conectar ao cluster com mysql (via port forward):"
