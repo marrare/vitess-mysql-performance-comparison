@@ -72,7 +72,7 @@ wait
 FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/read.txt"
 
-sleep 30
+sleep 120
 
 # write
 INITIALIZE_TIME=$(date --iso-8601=seconds)
@@ -94,7 +94,7 @@ wait
 FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
 
-sleep 30
+sleep 120
 
 # update
 INITIALIZE_TIME=$(date --iso-8601=seconds)
@@ -116,7 +116,7 @@ wait
 FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/update.txt"
 
-sleep 30
+sleep 120
 
 # complex (read+write)
 INITIALIZE_TIME=$(date --iso-8601=seconds)
@@ -138,7 +138,7 @@ wait
 FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/complex.txt"
 
-sleep 30
+sleep 120
 
 # delete
 INITIALIZE_TIME=$(date --iso-8601=seconds)
@@ -160,45 +160,47 @@ wait
 FINALIZE_TIME=$(date --iso-8601=seconds)
 echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/delete.txt"
 
-# cleanup (drop tables)
-sysbench oltp_read_write \
-  --mysql-db=$DB \
-  --mysql-host=$HOST \
-  --mysql-password=$PASSWORD \
-  --mysql-port=$PORT \
-  --mysql-user=$USER \
-  --tables=10 \
-  --table-size=$TABLE_SIZE \
-  cleanup >/dev/null 2>&1
 
-wait
-echo "Iniciando processamento dos logs..."
-
+echo "Iniciando processamento dos logs e métricas..."
 for file in "$OUT_DIR"/*; do
-    if [[ "$file" == *.csv ]] || [[ -d "$file" ]]; then
+    if [[ "$file" == *.csv ]] || [[ "$file" == *.json ]] || [[ -d "$file" ]]; then
         continue
     fi
 
     filename=$(basename "$file")
     NAME_ONLY="${filename%.*}"
+    NAME_FILE_TIMESTAMP="${filename%_*}"
+    if [[ "$NAME_FILE_TIMESTAMP" != *.txt ]]; then
+      NAME_FILE_TIMESTAMP="$NAME_FILE_TIMESTAMP.txt"
+    fi
+
+    CONTENT=$(<"$OUT_DIR/$NAME_FILE_TIMESTAMP")
+    START=$(echo "$CONTENT" | grep -oP 'Start:\s*\K.*')
+    END=$(echo "$CONTENT" | grep -oP 'End:\s*\K.*')
 
     if [[ "$NAME_ONLY" =~ [0-9] ]]; then
-
-      NAME_WITHOUT_NUMBERS="${filename%_*}.txt"
-      CONTENT=$(<"$OUT_DIR/$NAME_WITHOUT_NUMBERS")
-      START=$(echo "$CONTENT" | grep -oP 'Start:\s*\K.*')
-      END=$(echo "$CONTENT" | grep -oP 'End:\s*\K.*')
-
       python3 parse_sysbench.py \
         --file "$file" \
         --db "$ENGINE" \
         --type  "$NAME_ONLY" \
         --scale  "$SCALE" \
-        --simultaneity "sequencial" \
-        --output "$BENCHMARK_RESULTS/resultados.csv" \
+        --simultaneity "paralelo" \
         --start "$START" \
-        --end "$END"
+        --end "$END" \
+        --output "$BENCHMARK_RESULTS/$ENVIRONMENT/resultados.csv"
+      wait
+    else 
+      FILE_METRICS="${NAME_ONLY%_[0-9]*}"
+      python3 collect_hardware_metrics.py \
+        --db "$ENGINE" \
+        --type  "$FILE_METRICS" \
+        --scale  "$SCALE" \
+        --simultaneity "paralelo" \
+        --start "$START" \
+        --end "$END" \
+        --output "$OUT_DIR/${FILE_METRICS}.json"
+      wait
     fi
 done
 
-echo "Tudo pronto! CSV gerado."
+echo "Tudo pronto! CSV e JSON gerados."
