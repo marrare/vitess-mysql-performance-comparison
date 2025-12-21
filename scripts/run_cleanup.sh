@@ -10,9 +10,9 @@ case "$ENGINE" in
     ;;
   mysql)
     if [ "$ENVIRONMENT" = "local" ]; then
-      docker exec -it mysql-benchmark mysql -u root -P $MYSQL_PORT -h $MYSQL_HOST -p benchmark -e "$QUERY";
+      docker exec -it mysql-benchmark mysql -u root -p"$MYSQL_ROOT_PASSWORD" benchmark -e "$QUERY";
     else 
-      mysql -u root -P $MYSQL_PORT -h $MYSQL_HOST -p$MYSQL_ROOT_PASSWORD -e "$QUERY";
+      mysql -h $MYSQL_HOST -u root -P $MYSQL_PORT -p"$MYSQL_ROOT_PASSWORD" benchmark -e "$QUERY";
     fi
     ;;
 esac
