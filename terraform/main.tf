@@ -103,58 +103,68 @@ resource "aws_instance" "mysql_ec2" { ## TODO - adicionar
   }
 }
 
+resource "aws_instance" "test_ec2" {
+  ami           = "ami-0abcdef1234567890" 
+  instance_type = "t2.micro"
+  user_data     = filebase64("${path.module}/mysql_client.sh")
+
+  tags = {
+    Name = "TerraformUserDataExample"
+  }
+}
+
 # Salvar a chave privada localmente
 resource "local_file" "mysql_ssh_key" {
   content  = tls_private_key.mysql_ssh_key.private_key_pem
-  filename = "${path.module}/terraform/keys/${local.name}-ssh-key.pem"
+  filename = "${path.module}/keys/${local.name}-ssh-key.pem"
 }
 
-# Módulo para criar o cluster EKS
-module "eks" {
-  source  = "terraform-aws-modules/eks/aws"
-  version = "~> 21.0"
+# # Módulo para criar o cluster EKS
+# module "eks" {
+#   source  = "terraform-aws-modules/eks/aws"
+#   version = "~> 21.0"
 
-  name                   = local.name
-  kubernetes_version     = local.kubernetes_version
-  endpoint_public_access = true
-  enable_cluster_creator_admin_permissions = true
+#   name                   = local.name
+#   kubernetes_version     = local.kubernetes_version
+#   endpoint_public_access = true
+#   enable_cluster_creator_admin_permissions = true
   
 
-  addons = {
-    coredns                = {}
-    eks-pod-identity-agent = {
-      before_compute = true
-    }
-    kube-proxy             = {}
-    vpc-cni                = {
-      before_compute = true
-    }
-  }
+#   addons = {
+#     coredns                = {}
+#     eks-pod-identity-agent = {
+#       before_compute = true
+#     }
+#     kube-proxy             = {}
+#     vpc-cni                = {
+#       before_compute = true
+#     }
+#   }
 
-  vpc_id                   = module.vpc.vpc_id
-  subnet_ids               = module.vpc.private_subnets
-  control_plane_subnet_ids = module.vpc.intra_subnets
+#   vpc_id                   = module.vpc.vpc_id
+#   subnet_ids               = module.vpc.private_subnets
+#   control_plane_subnet_ids = module.vpc.intra_subnets
 
-  # Configuração nodeGroup
-  eks_managed_node_groups = {
-    vitess_workers = {
-      desired_size   = 2
-      max_size       = 2
-      min_size       = 2
-      instance_types = ["m5.large"]
+#   # Configuração nodeGroup
+#   eks_managed_node_groups = {
+#     vitess_workers = {
+#       desired_size   = 2
+#       max_size       = 2
+#       min_size       = 2
+#       instance_types = ["m5.large"]
 
-      tags = {
-        Environment = "research"
-      }
-    }
-  }
+#       tags = {
+#         Environment = "research"
+#       }
+#     }
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
-output "eks_managed_node_groups" {
-  value = module.eks.eks_managed_node_groups
-}
+# output "eks_managed_node_groups" {
+#   value = module.eks.eks_managed_node_groups
+# }
 
 # resource "kubernetes_storage_class_v1" "gp3_default" {
 #   metadata {
@@ -184,14 +194,4 @@ output "eks_managed_node_groups" {
 
 #   # Ensure the storage class is created after the EBS CSI driver is ready
 #   depends_on = [module.eks] 
-# }
-
-# resource "aws_instance" "ec2-test" {
-#   ami           = "ami-0abcdef1234567890" 
-#   instance_type = "t2.micro"
-#   user_data     = filebase64("${path.module}/mysql_client.sh")
-
-#   tags = {
-#     Name = "TerraformUserDataExample"
-#   }
 # }
