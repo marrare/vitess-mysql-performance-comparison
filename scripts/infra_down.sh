@@ -9,8 +9,8 @@ case "$ENVIRONMENT" in
     docker-compose -f ../dependencies/mysql/docker-compose.yml down -v
     ;;
   aws)
-    echo "***** INICIANDO AMBIENTE AWS COM EC2 E EKS *****"
-    cd ../
+    echo "***** DELETANDO AMBIENTE AWS COM EC2 E EKS *****"
+    cd ../terraform
     terraform destroy -auto-approve
     kubectl config delete-cluster research-cluster
     cd -

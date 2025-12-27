@@ -27,7 +27,7 @@ case "$ENVIRONMENT" in
     check_cmd aws
 
     echo "***** INICIANDO AMBIENTE AWS COM EC2 E EKS *****"
-    cd ../
+    cd ../terraform
     terraform init
     terraform plan
     terraform apply
@@ -97,8 +97,8 @@ else
 fi
 
 echo "***** APLICANDO SCHEMA INICIAIS *****"
-vtctldclient ApplySchema --sql-file="../dependencies/vitess/create_schema.sql" benchmark || echo "Falha ao aplicar schema"
-vtctldclient ApplyVSchema --vschema-file="../dependencies/vitess/vschema_sharded.json" benchmark || echo "Falha ao aplicar vschema"
+vtctldclient ApplySchema --server=localhost:15999 --sql-file="../dependencies/vitess/create_schema.sql" benchmark || echo "Falha ao aplicar schema"
+vtctldclient ApplyVSchema --server=localhost:15999 --vschema-file="../dependencies/vitess/vschema_sharded.json" benchmark || echo "Falha ao aplicar vschema"
 
 echo
 echo "Para conectar ao cluster com mysql (via port forward):"

@@ -55,14 +55,14 @@ resource "aws_security_group" "mysql_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = [local.vpc_cidr, local.public_ip]
+    cidr_blocks = [local.vpc_cidr, "0.0.0.0/32"]
   }
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [local.vpc_cidr, local.public_ip]
+    cidr_blocks = [local.vpc_cidr, "0.0.0.0/32"]
   }
 
   tags = {
@@ -83,7 +83,7 @@ resource "aws_key_pair" "mysql_ssh_key" {
 }
 
 # Instância EC2 para MySQL
-resource "aws_instance" "mysql_ec2" {
+resource "aws_instance" "mysql_ec2" { ## TODO - adicionar 
   ami           = "ami-0c02fb55956c7d316"
   instance_type = "m5.xlarge"
 
@@ -106,7 +106,7 @@ resource "aws_instance" "mysql_ec2" {
 # Salvar a chave privada localmente
 resource "local_file" "mysql_ssh_key" {
   content  = tls_private_key.mysql_ssh_key.private_key_pem
-  filename = "${path.module}/keys/${local.name}-ssh-key.pem"
+  filename = "${path.module}/terraform/keys/${local.name}-ssh-key.pem"
 }
 
 # Módulo para criar o cluster EKS
@@ -155,3 +155,43 @@ module "eks" {
 output "eks_managed_node_groups" {
   value = module.eks.eks_managed_node_groups
 }
+
+# resource "kubernetes_storage_class_v1" "gp3_default" {
+#   metadata {
+#     name = "gp3-default"
+#     annotations = {
+#       # This annotation makes this the default StorageClass
+#       "storageclass.kubernetes.io/is-default-class" = "true"
+#     }
+#   }
+
+#   # Use the EBS CSI provisioner
+#   storage_provisioner = "ebs.csi.aws.com" 
+  
+#   # Allows resizing the volume without downtime
+#   allow_volume_expansion = true 
+  
+#   # Deletes the EBS volume when the PVC is deleted
+#   reclaim_policy = "Delete" 
+
+#   volume_binding_mode = "WaitForFirstConsumer" # Binds the volume when a pod is scheduled
+
+#   parameters = {
+#     type      = "gp3"        # Specifies the desired EBS volume type
+#     encrypted = "true"       # Encrypts the volume
+#     fsType    = "ext4"       # Filesystem type
+#   }
+
+#   # Ensure the storage class is created after the EBS CSI driver is ready
+#   depends_on = [module.eks] 
+# }
+
+# resource "aws_instance" "ec2-test" {
+#   ami           = "ami-0abcdef1234567890" 
+#   instance_type = "t2.micro"
+#   user_data     = filebase64("${path.module}/mysql_client.sh")
+
+#   tags = {
+#     Name = "TerraformUserDataExample"
+#   }
+# }
