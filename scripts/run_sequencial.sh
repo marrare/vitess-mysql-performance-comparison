@@ -7,7 +7,7 @@ echo "***** RUNNING SEQUENCIAL BENCHMARKS WITH SYSBENCH *****"
 echo "ENGINE: $ENGINE"
 echo "SCALE: $SCALE"
 echo "ENVIRONMENT: $ENVIRONMENT"
-SEQUENCIAL=2
+SEQUENCIAL=$SEQUENCIAL || 5
 
 ./run_cleanup.sh
 
@@ -34,7 +34,7 @@ case "$SCALE" in
   alta)  TABLE_SIZE=1000000 ;;
 esac
 
-BENCHMARK_RESULTS=../sysbench/results
+BENCHMARK_RESULTS=$BENCHMARK_RESULTS || ../sysbench/results
 OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}/sequencial"
 mkdir -p "$OUT_DIR"
 
