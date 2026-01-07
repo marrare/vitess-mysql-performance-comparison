@@ -5,6 +5,55 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+def plot_multimetric_by_scenario(
+    df: pd.DataFrame,
+    test_base: str,
+    scenario: str,
+    title: str,
+    outpath: Path,
+    tps_col: str = "tps_s_mean",
+    qps_col: str = "qps_s_mean",
+    lat_col: str = "lat_95th_mean",
+    x_col: str = "scale",
+    db_col: str = "database",
+    scenario_col: str = "simultaneity",
+):
+    data = df[(df["test_base"] == test_base) & (df[scenario_col] == scenario)].copy()
+    if data.empty:
+        raise ValueError(f"Sem dados para test_base='{test_base}' e scenario='{scenario}'.")
+
+    # Marcadores: Vitess quadrado, MySQL triângulo
+    marker_by_db = {"vitess": "s", "mysql": "^"}
+
+    metrics = [
+        (tps_col, "TPS"),
+        (qps_col, "QPS"),
+        (lat_col, "Lat P95 (ms)"),
+    ]
+
+    fig, ax = plt.subplots(figsize=(7, 4.5))
+
+    # Uma "cor" por métrica; dentro de cada métrica, 2 séries (mysql/vitess) com marcadores diferentes
+    for col, metric_label in metrics:
+        for db in ["vitess", "mysql"]:
+            d = data[data[db_col] == db].sort_values(x_col)
+            ax.plot(
+                d[x_col].astype(str),
+                d[col].values,
+                marker=marker_by_db.get(db, "o"),
+                label=f"{metric_label} — {db.capitalize()}",
+            )
+
+    ax.set_xlabel("Carga")
+    ax.set_ylabel("Valor (unidades originais)")
+    ax.set_title(title)
+    ax.legend(ncols=1, fontsize=9)
+
+    fig.tight_layout()
+    outpath.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(outpath, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
 def _pivot(df: pd.DataFrame, value_col: str, x_col="scale", hue_col="database"):
     pivot = (df.pivot_table(index=x_col, columns=hue_col,
                             values=value_col, aggfunc="first")

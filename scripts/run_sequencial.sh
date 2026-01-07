@@ -184,7 +184,7 @@ for file in "$OUT_DIR"/*; do
         --db "$ENGINE" \
         --type  "$NAME_ONLY" \
         --scale  "$SCALE" \
-        --simultaneity "paralelo" \
+        --simultaneity "sequencial" \
         --start "$START" \
         --end "$END" \
         --output "$BENCHMARK_RESULTS/$ENVIRONMENT/resultados.csv"
@@ -195,7 +195,7 @@ for file in "$OUT_DIR"/*; do
         --db "$ENGINE" \
         --type  "$FILE_METRICS" \
         --scale  "$SCALE" \
-        --simultaneity "paralelo" \
+        --simultaneity "sequencial" \
         --start "$START" \
         --end "$END" \
         --output "$OUT_DIR/${FILE_METRICS}.json"
