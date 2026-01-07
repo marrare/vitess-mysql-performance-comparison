@@ -25,29 +25,56 @@ def plot_multimetric_by_scenario(
     # Marcadores: Vitess quadrado, MySQL triângulo
     marker_by_db = {"vitess": "s", "mysql": "^"}
 
-    metrics = [
+    fig, ax_left = plt.subplots(figsize=(7, 4.5))
+    ax_right = ax_left.twinx()
+
+    # -------------------------
+    # EIXO ESQUERDO — TPS / QPS
+    # -------------------------
+    for col, metric_label in [
         (tps_col, "TPS"),
         (qps_col, "QPS"),
-        (lat_col, "Lat P95 (ms)"),
-    ]
-
-    fig, ax = plt.subplots(figsize=(7, 4.5))
-
-    # Uma "cor" por métrica; dentro de cada métrica, 2 séries (mysql/vitess) com marcadores diferentes
-    for col, metric_label in metrics:
+    ]:
         for db in ["vitess", "mysql"]:
             d = data[data[db_col] == db].sort_values(x_col)
-            ax.plot(
+            ax_left.plot(
                 d[x_col].astype(str),
                 d[col].values,
                 marker=marker_by_db.get(db, "o"),
                 label=f"{metric_label} — {db.capitalize()}",
             )
 
-    ax.set_xlabel("Carga")
-    ax.set_ylabel("Valor (unidades originais)")
-    ax.set_title(title)
-    ax.legend(ncols=1, fontsize=9)
+    ax_left.set_ylabel("Throughput (operações por segundo)")
+    ax_left.set_xlabel("Carga")
+
+    # -------------------------
+    # EIXO DIREITO — LATÊNCIA
+    # -------------------------
+    for db in ["vitess", "mysql"]:
+        d = data[data[db_col] == db].sort_values(x_col)
+        ax_right.plot(
+            d[x_col].astype(str),
+            d[lat_col].values,
+            linestyle="--",
+            marker=marker_by_db.get(db, "o"),
+            label=f"Lat P95 — {db.capitalize()}",
+        )
+
+    ax_right.set_ylabel("Latência P95 (ms)")
+
+    # -------------------------
+    # TÍTULO + LEGENDA
+    # -------------------------
+    ax_left.set_title(title)
+
+    lines_l, labels_l = ax_left.get_legend_handles_labels()
+    lines_r, labels_r = ax_right.get_legend_handles_labels()
+    ax_left.legend(
+        lines_l + lines_r,
+        labels_l + labels_r,
+        fontsize=9,
+        ncols=1,
+    )
 
     fig.tight_layout()
     outpath.parent.mkdir(parents=True, exist_ok=True)
