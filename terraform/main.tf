@@ -82,8 +82,8 @@ resource "aws_key_pair" "mysql_ssh_key" {
   public_key = tls_private_key.mysql_ssh_key.public_key_openssh
 }
 
-# Instância EC2 para MySQL
-resource "aws_instance" "mysql_ec2" { ## TODO - adicionar 
+# Instância EC2 para MySQL Server
+resource "aws_instance" "mysql_standalone" {
   ami           = "ami-0c02fb55956c7d316"
   instance_type = "m5.xlarge"
 
@@ -100,16 +100,6 @@ resource "aws_instance" "mysql_ec2" { ## TODO - adicionar
 
   tags = {
     Name = "mysql-server"
-  }
-}
-
-resource "aws_instance" "test_ec2" {
-  ami           = "ami-0abcdef1234567890" 
-  instance_type = "t2.micro"
-  user_data     = filebase64("${path.module}/mysql_client.sh")
-
-  tags = {
-    Name = "TerraformUserDataExample"
   }
 }
 
@@ -195,3 +185,34 @@ resource "local_file" "mysql_ssh_key" {
 #   # Ensure the storage class is created after the EBS CSI driver is ready
 #   depends_on = [module.eks] 
 # }
+
+locals {
+  mysql_host = aws_instance.mysql_standalone.private_ip
+}
+
+resource "aws_instance" "sysbench_client" {
+  ami           = "ami-00cabbfdcb933e759" 
+  instance_type = "c7g.medium"
+
+  subnet_id                   = module.vpc.public_subnets[0]
+  vpc_security_group_ids      = [aws_security_group.mysql_sg.id]
+  associate_public_ip_address = true
+
+  user_data_base64 = base64encode(templatefile("${path.module}/user_data.tpl", {
+    mysql_host  = local.mysql_host
+  }))
+
+  root_block_device {
+    volume_type = "gp3"
+    volume_size = 20
+    iops        = 3000
+    throughput  = 125
+    delete_on_termination = true
+  }
+
+  key_name = aws_key_pair.mysql_ssh_key.key_name
+
+  tags = {
+    Name = "sysbench-client"
+  }
+}
