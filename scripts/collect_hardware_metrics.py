@@ -5,9 +5,7 @@ import argparse
 import urllib.request
 import urllib.parse
 
-PROMETHEUS_URL = "http://localhost:9090"
-
-def query_prometheus(prom_query: str, start_time: datetime, end_time: datetime) -> dict | None:
+def query_prometheus(prom_query: str, start_time: datetime, end_time: datetime, prometheus_url: str) -> dict | None:
     start_str = start_time.astimezone(timezone.utc).isoformat(timespec='milliseconds')
     end_str = end_time.astimezone(timezone.utc).isoformat(timespec='milliseconds')
 
@@ -19,7 +17,7 @@ def query_prometheus(prom_query: str, start_time: datetime, end_time: datetime) 
     }
 
     query_string = urllib.parse.urlencode(params)
-    api_url = f"{PROMETHEUS_URL}/api/v1/query_range?{query_string}"
+    api_url = f"{prometheus_url}/api/v1/query_range?{query_string}"
 
     try:
         with urllib.request.urlopen(api_url) as response:
@@ -30,7 +28,7 @@ def query_prometheus(prom_query: str, start_time: datetime, end_time: datetime) 
         return None
 
 
-def fetch_metrics(db: str, test_type: str, scale: str, simultaneity: str, start_dt: datetime, end_dt: datetime) -> list[dict]:
+def fetch_metrics(db: str, test_type: str, scale: str, simultaneity: str, start_dt: datetime, end_dt: datetime, prometheus_url: str) -> list[dict]:
     queries = [
         ("CPU Utilization (%)", '100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[1m])) * 100)'),
         ("Memory Utilization (%)", '(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100'),
@@ -42,7 +40,7 @@ def fetch_metrics(db: str, test_type: str, scale: str, simultaneity: str, start_
 
     all_results = []
     for metric_name, promql in queries:
-        data = query_prometheus(promql, start_dt, end_dt)
+        data = query_prometheus(promql, start_dt, end_dt, prometheus_url)
 
         if data and data.get('status') == 'success':
             for series in data['data']['result']:
@@ -79,6 +77,8 @@ if __name__ == "__main__":
     parser.add_argument("--start", required=True, help="Start time in ISO 8601 format")
     parser.add_argument("--end", required=True, help="End time in ISO 8601 format")
     parser.add_argument("--output", required=True, help="Output JSON file path")
+    parser.add_argument("--prometheus_url", default="http://localhost:9090", required=False, help="Prometheus URL")
+
     args = parser.parse_args()
 
     # Ajuste para incluir margem de 1 minuto antes e depois
@@ -86,9 +86,9 @@ if __name__ == "__main__":
     end_dt = parse_iso8601(args.end)
     start_dt = start_dt - timedelta(seconds=60)
     end_dt = end_dt + timedelta(seconds=60)
-
+    
     # Coleta os dados
-    results = fetch_metrics(args.db, args.type, args.scale, args.simultaneity, start_dt, end_dt)
+    results = fetch_metrics(args.db, args.type, args.scale, args.simultaneity, start_dt, end_dt, args.prometheus_url)
 
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
