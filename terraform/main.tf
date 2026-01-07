@@ -109,82 +109,115 @@ resource "local_file" "mysql_ssh_key" {
   filename = "${path.module}/keys/${local.name}-ssh-key.pem"
 }
 
-# # Módulo para criar o cluster EKS
-# module "eks" {
-#   source  = "terraform-aws-modules/eks/aws"
-#   version = "~> 21.0"
+# Módulo para criar o cluster EKS
+module "eks" {
+  source  = "terraform-aws-modules/eks/aws"
+  version = "~> 21.0"
 
-#   name                   = local.name
-#   kubernetes_version     = local.kubernetes_version
-#   endpoint_public_access = true
-#   enable_cluster_creator_admin_permissions = true
+  name                   = local.name
+  kubernetes_version     = local.kubernetes_version
+  endpoint_public_access = true
+  enable_cluster_creator_admin_permissions = true
   
 
-#   addons = {
-#     coredns                = {}
-#     eks-pod-identity-agent = {
-#       before_compute = true
-#     }
-#     kube-proxy             = {}
-#     vpc-cni                = {
-#       before_compute = true
-#     }
-#   }
+  addons = {
+    coredns                = {}
+    eks-pod-identity-agent = {
+      before_compute = true
+    }
+    kube-proxy             = {}
+    vpc-cni                = {
+      before_compute = true
+    }
+    aws-ebs-csi-driver     = { 
+      service_account_role_arn = aws_iam_role.ebs_csi_role.arn
+      before_compute           = false
+    }
+  }
 
-#   vpc_id                   = module.vpc.vpc_id
-#   subnet_ids               = module.vpc.private_subnets
-#   control_plane_subnet_ids = module.vpc.intra_subnets
+  vpc_id                   = module.vpc.vpc_id
+  subnet_ids               = module.vpc.private_subnets
+  control_plane_subnet_ids = module.vpc.intra_subnets
 
-#   # Configuração nodeGroup
-#   eks_managed_node_groups = {
-#     vitess_workers = {
-#       desired_size   = 2
-#       max_size       = 2
-#       min_size       = 2
-#       instance_types = ["m5.large"]
+  # Configuração nodeGroup
+  eks_managed_node_groups = {
+    vitess_workers = {
+      desired_size   = 2
+      max_size       = 2
+      min_size       = 2
+      instance_types = ["m5.large"]
 
-#       tags = {
-#         Environment = "research"
-#       }
-#     }
-#   }
+      tags = {
+        Environment = "research"
+      }
+    }
+  }
 
-#   tags = local.tags
-# }
+  tags = local.tags
+}
 
-# output "eks_managed_node_groups" {
-#   value = module.eks.eks_managed_node_groups
-# }
+output "eks_managed_node_groups" {
+  value = module.eks.eks_managed_node_groups
+}
 
-# resource "kubernetes_storage_class_v1" "gp3_default" {
-#   metadata {
-#     name = "gp3-default"
-#     annotations = {
-#       # This annotation makes this the default StorageClass
-#       "storageclass.kubernetes.io/is-default-class" = "true"
-#     }
-#   }
+provider "kubernetes" {
+  host                   = module.eks.cluster_endpoint
+  cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
 
-#   # Use the EBS CSI provisioner
-#   storage_provisioner = "ebs.csi.aws.com" 
-  
-#   # Allows resizing the volume without downtime
-#   allow_volume_expansion = true 
-  
-#   # Deletes the EBS volume when the PVC is deleted
-#   reclaim_policy = "Delete" 
+  exec {
+    api_version = "client.authentication.k8s.io/v1beta1"
+    command     = "aws"
+    # Certifique-se de que o profile e a região coincidam com o seu provedor AWS
+    args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name, "--profile", "tcc", "--region", local.region]
+  }
+}
 
-#   volume_binding_mode = "WaitForFirstConsumer" # Binds the volume when a pod is scheduled
+# Configuração do Storage Class padrão para EBS gp3
+resource "kubernetes_storage_class_v1" "gp3_default" {
+  metadata {
+    name = "gp3-default"
+    annotations = {
+      "storageclass.kubernetes.io/is-default-class" = "true"
+    }
+  }
 
-#   parameters = {
-#     type      = "gp3"        # Specifies the desired EBS volume type
-#     encrypted = "true"       # Encrypts the volume
-#     fsType    = "ext4"       # Filesystem type
-#   }
+  storage_provisioner    = "ebs.csi.aws.com" 
+  reclaim_policy         = "Delete" 
+  allow_volume_expansion = true 
+  volume_binding_mode    = "WaitForFirstConsumer"
 
-#   # Ensure the storage class is created after the EBS CSI driver is ready
-#   depends_on = [module.eks] 
-# }
+  parameters = {
+    type      = "gp3"
+    encrypted = "true"
+  }
+
+  depends_on = [module.eks] 
+}
+
+resource "aws_iam_role" "ebs_csi_role" {
+  name = "${local.name}-ebs-csi-role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect = "Allow"
+      Principal = {
+        Federated = module.eks.oidc_provider_arn
+      }
+      Action = "sts:AssumeRoleWithWebIdentity"
+      Condition = {
+        StringEquals = {
+          "${replace(module.eks.cluster_oidc_issuer_url, "https://", "")}:sub" = "system:serviceaccount:kube-system:ebs-csi-controller-sa"
+        }
+      }
+    }]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "ebs_csi_policy" {
+  role       = aws_iam_role.ebs_csi_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
+}
 
 locals {
   mysql_host = aws_instance.mysql_standalone.private_ip
