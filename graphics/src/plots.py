@@ -23,10 +23,23 @@ def plot_multimetric_by_scenario(
         raise ValueError(f"Sem dados para test_base='{test_base}' e scenario='{scenario}'.")
 
     # Marcadores: Vitess quadrado, MySQL triângulo
-    marker_by_db = {"vitess": "s", "mysql": "^"}
+    # marker_by_db = {"vitess": "s", "mysql": "^"}
+
+    marker_by_db = {"vitess": "o", "mysql": "o"}
+    linestyle_by_db = {"vitess": "--", "mysql": "-"}
 
     fig, ax_left = plt.subplots(figsize=(7, 4.5))
     ax_right = ax_left.twinx()
+
+    # -------------------------
+    # MÉTRICAS DAS MESMAS CORES
+    # -------------------------
+    color_cycle = plt.rcParams["axes.prop_cycle"].by_key()["color"]
+    metric_color = {
+        "TPS": color_cycle[0],
+        "QPS": color_cycle[1],
+        "LAT": color_cycle[2],
+    }
 
     # -------------------------
     # EIXO ESQUERDO — TPS / QPS
@@ -35,16 +48,28 @@ def plot_multimetric_by_scenario(
         (tps_col, "TPS"),
         (qps_col, "QPS"),
     ]:
+        color = metric_color["TPS"] if metric_label == "TPS" else metric_color["QPS"]
         for db in ["vitess", "mysql"]:
             d = data[data[db_col] == db].sort_values(x_col)
             ax_left.plot(
                 d[x_col].astype(str),
                 d[col].values,
+                color=color,
+                linestyle=linestyle_by_db.get(db, "-"),
                 marker=marker_by_db.get(db, "o"),
+                markersize=3,
                 label=f"{metric_label} — {db.capitalize()}",
             )
 
-    ax_left.set_ylabel("Throughput (operações por segundo)")
+            annotate_points(
+                ax_left,
+                d[x_col].astype(str),
+                d[col].values,
+                fmt="{:.0f}",
+                dy=6
+            )
+
+    ax_left.set_ylabel("TPS e QPS (operações por segundo)")
     ax_left.set_xlabel("Carga")
 
     # -------------------------
@@ -55,13 +80,23 @@ def plot_multimetric_by_scenario(
         ax_right.plot(
             d[x_col].astype(str),
             d[lat_col].values,
-            linestyle="--",
+            color=metric_color["LAT"],
+            linestyle=linestyle_by_db.get(db, "-"),
             marker=marker_by_db.get(db, "o"),
+            markersize=3,
             label=f"Lat P95 — {db.capitalize()}",
         )
 
-    ax_right.set_ylabel("Latência P95 (ms)")
+        annotate_points(
+            ax_right,
+            d[x_col].astype(str),
+            d[lat_col].values,
+            fmt="{:.0f}",   # ms inteiros
+            dy=6
+        )
 
+    ax_right.set_ylabel("Lat P95 (milissegundos)")
+    
     # -------------------------
     # TÍTULO + LEGENDA
     # -------------------------
@@ -80,6 +115,27 @@ def plot_multimetric_by_scenario(
     outpath.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(outpath, dpi=300, bbox_inches="tight")
     plt.close(fig)
+
+def annotate_points(ax, x, y, fmt="{:.1f}", dy=5):
+    """
+    ax : eixo matplotlib
+    x  : valores do eixo X (strings ou números)
+    y  : valores do eixo Y
+    fmt: formato do texto
+    dy : deslocamento vertical (em pontos)
+    """
+    for xi, yi in zip(x, y):
+        if yi is None or pd.isna(yi):
+            continue
+        ax.annotate(
+            fmt.format(yi),
+            (xi, yi),
+            textcoords="offset points",
+            xytext=(0, dy),
+            ha="center",
+            fontsize=7,
+            alpha=0.7,
+        )
 
 def _pivot(df: pd.DataFrame, value_col: str, x_col="scale", hue_col="database"):
     pivot = (df.pivot_table(index=x_col, columns=hue_col,
