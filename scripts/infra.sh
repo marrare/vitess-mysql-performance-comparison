@@ -19,7 +19,7 @@ case "$ENVIRONMENT" in
 
     echo "***** INICIANDO AMBIENTE LOCAL COM MINIKUBE ****"
     minikube delete
-    minikube start --kubernetes-version=v1.32.2 --cpus=4 --memory=16g --disk-size=32g
+    minikube start --kubernetes-version=v1.32.2 --cpus=6 --memory=16g --disk-size=50g
     minikube addons disable metrics-server #Necessário para rodar kube-prometheus
     ;;
   aws)
@@ -30,7 +30,7 @@ case "$ENVIRONMENT" in
     cd ../terraform
     terraform init
     terraform plan
-    terraform apply
+    terraform apply -auto-approve
     aws eks update-kubeconfig --region us-east-1 --name research-cluster --profile tcc
     cd -
     ;;
