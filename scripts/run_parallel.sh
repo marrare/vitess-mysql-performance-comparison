@@ -7,9 +7,9 @@ echo "***** RUNNING PARALLEL BENCHMARKS WITH SYSBENCH *****"
 echo "ENGINE: $ENGINE"
 echo "SCALE: $SCALE"
 echo "ENVIRONMENT: $ENVIRONMENT"
-PARALLEL=5
+PARALLEL=10
 
-./run_cleanup.sh
+#./run_cleanup.sh
 
 case "$ENGINE" in
   mysql)
@@ -17,7 +17,7 @@ case "$ENGINE" in
     HOST=$MYSQL_HOST
     PASSWORD=$MYSQL_ROOT_PASSWORD
     PORT=$MYSQL_PORT
-    USER='root'
+    USER=$MYSQL_USER
     ;;
   vitess)
     DB=$VITESS_DATABASE
