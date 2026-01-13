@@ -9,8 +9,7 @@ locals {
   region = "us-east-1"
 
   vpc_cidr = "10.0.0.0/16"
-  public_ip = "IP_PUBLICO/32" # IP público para acesso ao MySQL https://ifconfig.me
-  azs      = ["us-east-1a", "us-east-1b"]
+  azs      = ["us-east-1a"]
 
   public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
@@ -19,6 +18,8 @@ locals {
   tags = {
     Environment = "research"
   }
+
+  mysql_host = aws_instance.mysql_standalone.private_ip
 }
 
 # Módulo para criar a VPC
@@ -62,7 +63,14 @@ resource "aws_security_group" "mysql_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [local.vpc_cidr, "0.0.0.0/32"]
+    cidr_blocks = [local.vpc_cidr, "0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
@@ -191,7 +199,7 @@ resource "kubernetes_storage_class_v1" "gp3_default" {
     encrypted = "true"
   }
 
-  depends_on = [module.eks] 
+  depends_on = [module.eks.cluster_addons] 
 }
 
 resource "aws_iam_role" "ebs_csi_role" {
@@ -217,10 +225,6 @@ resource "aws_iam_role" "ebs_csi_role" {
 resource "aws_iam_role_policy_attachment" "ebs_csi_policy" {
   role       = aws_iam_role.ebs_csi_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
-}
-
-locals {
-  mysql_host = aws_instance.mysql_standalone.private_ip
 }
 
 resource "aws_instance" "sysbench_client" {

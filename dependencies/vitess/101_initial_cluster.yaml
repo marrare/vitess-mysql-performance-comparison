@@ -8,13 +8,6 @@ metadata:
   name: example
   namespace: vitess
 spec:
-  backup:
-    engine: xtrabackup
-    locations:
-      - volume:
-          hostPath:
-            path: /tmp
-            type: Directory
   images:
     vtctld: vitess/lite:latest
     vtadmin: vitess/vtadmin:latest
@@ -33,12 +26,10 @@ spec:
           secret:
             name: example-cluster-config
             key: users.json
-      replicas: 1
+      replicas: 3
       resources:
         requests:
           cpu: 100m
-          memory: 256Mi
-        limits:
           memory: 256Mi
   vitessDashboard:
     cells:
@@ -47,8 +38,6 @@ spec:
       security-policy: read-only
     replicas: 1
     resources:
-      limits:
-        memory: 128Mi
       requests:
         cpu: 100m
         memory: 128Mi
@@ -63,14 +52,10 @@ spec:
     replicas: 1
     readOnly: false
     apiResources:
-      limits:
-        memory: 128Mi
       requests:
         cpu: 100m
         memory: 128Mi
     webResources:
-      limits:
-        memory: 128Mi
       requests:
         cpu: 100m
         memory: 128Mi
@@ -81,8 +66,6 @@ spec:
     turndownPolicy: Immediate
     vitessOrchestrator:
       resources:
-        limits:
-          memory: 128Mi
         requests:
           cpu: 100m
           memory: 128Mi
@@ -98,20 +81,16 @@ spec:
           tabletPools:
           - cell: zone1
             type: replica
-            replicas: 3 # tablets by shard
+            replicas: 2 # tablets by shard
             vttablet:
               extraFlags:
                 db-charset: utf8mb4
               resources:
-                limits:
-                  memory: 256Mi
                 requests:
                   cpu: 100m
                   memory: 256Mi
             mysqld:
               resources:
-                limits:
-                  memory: 1024Mi
                 requests:
                   cpu: 100m
                   memory: 512Mi
@@ -119,7 +98,7 @@ spec:
               accessModes: ["ReadWriteOnce"]
               resources:
                 requests:
-                  storage: 10Gi
+                  storage: 4Gi
   updateStrategy:
     type: Immediate
 ---
@@ -231,3 +210,21 @@ stringData:
         - "planned_failover_shard"
       subjects: ["*"]
       clusters: ["*"]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vtgate-nlb-internal
+  namespace: vitess
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+spec:
+  type: LoadBalancer
+  selector:
+    planetscale.com/cluster: example
+    planetscale.com/component: vtgate
+  ports:
+    - name: mysql
+      port: 3306
+      targetPort: 3306
