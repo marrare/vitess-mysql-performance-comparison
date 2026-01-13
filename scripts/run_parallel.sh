@@ -174,18 +174,6 @@ for file in "$OUT_DIR"/*; do
         --end "$END" \
         --output "$BENCHMARK_RESULTS/$ENVIRONMENT/resultados.csv"
       wait
-    else 
-      FILE_METRICS="${NAME_ONLY%_[0-9]*}"
-      python3 collect_hardware_metrics.py \
-        --db "$ENGINE" \
-        --type  "$FILE_METRICS" \
-        --scale  "$SCALE" \
-        --simultaneity "paralelo" \
-        --start "$START" \
-        --end "$END" \
-        --output "$OUT_DIR/${FILE_METRICS}.json" \
-      	--prometheus_url "$PROMETHEUS_URL"
-      wait
     fi
 done
 
