@@ -17,7 +17,7 @@ case "$ENGINE" in
     HOST=$MYSQL_HOST
     PASSWORD=$MYSQL_ROOT_PASSWORD
     PORT=$MYSQL_PORT
-    USER='root'
+    USER=$MYSQL_USER
     ;;
   vitess)
     DB=$VITESS_DATABASE
@@ -176,17 +176,6 @@ for file in "$OUT_DIR"/*; do
         --start "$START" \
         --end "$END" \
         --output "$BENCHMARK_RESULTS/$ENVIRONMENT/resultados.csv"
-      wait
-    else 
-      FILE_METRICS="${NAME_ONLY%_[0-9]*}"
-      python3 collect_hardware_metrics.py \
-        --db "$ENGINE" \
-        --type  "$FILE_METRICS" \
-        --scale  "$SCALE" \
-        --simultaneity "sequencial" \
-        --start "$START" \
-        --end "$END" \
-        --output "$OUT_DIR/${FILE_METRICS}.json"
       wait
     fi
 done
