@@ -9,7 +9,7 @@ echo "SCALE: $SCALE"
 echo "ENVIRONMENT: $ENVIRONMENT"
 PARALLEL=10
 
-#./run_cleanup.sh
+./run_cleanup.sh
 
 case "$ENGINE" in
   mysql)
@@ -207,7 +207,7 @@ for file in "$OUT_DIR"/*; do
         --simultaneity "paralelo" \
         --start "$START" \
         --end "$END" \
-        --output "$OUT_DIR/${FILE_METRICS}.json"
+        --output "$OUT_DIR/${FILE_METRICS}.json" \
       	--prometheus_url "$PROMETHEUS_URL"
       wait
     fi

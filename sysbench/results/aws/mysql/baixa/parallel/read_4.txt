@@ -7,73 +7,32 @@ Initializing random number generator from current time
 
 Initializing worker threads...
 
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: Threads initialization failed!
+Threads started!
+
+SQL statistics:
+    queries performed:
+        read:                            161322
+        write:                           0
+        other:                           23046
+        total:                           184368
+    transactions:                        11523  (191.70 per sec.)
+    queries:                             184368 (3067.22 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+Throughput:
+    events/s (eps):                      191.7013
+    time elapsed:                        60.1091s
+    total number of events:              11523
+
+Latency (ms):
+         min:                                   12.79
+         avg:                                  260.22
+         max:                                  735.32
+         95th percentile:                      434.83
+         sum:                              2998541.13
+
+Threads fairness:
+    events (avg/stddev):           230.4600/3.14
+    execution time (avg/stddev):   59.9708/0.04
+

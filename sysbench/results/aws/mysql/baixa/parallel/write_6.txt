@@ -7,10 +7,32 @@ Initializing random number generator from current time
 
 Initializing worker threads...
 
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: unable to connect to MySQL server on host '10.0.1.116', port 3306, aborting...
-FATAL: error 1040: Too many connections
-FATAL: `thread_init' function failed: /usr/local/share/sysbench/oltp_common.lua:356: connection creation failed
-FATAL: Threads initialization failed!
+Threads started!
+
+SQL statistics:
+    queries performed:
+        read:                            0
+        write:                           80137
+        other:                           76277
+        total:                           156414
+    transactions:                        26069  (434.09 per sec.)
+    queries:                             156414 (2604.55 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+Throughput:
+    events/s (eps):                      434.0918
+    time elapsed:                        60.0541s
+    total number of events:              26069
+
+Latency (ms):
+         min:                                    1.38
+         avg:                                  115.06
+         max:                                  804.05
+         95th percentile:                      267.41
+         sum:                              2999544.39
+
+Threads fairness:
+    events (avg/stddev):           521.3800/16.76
+    execution time (avg/stddev):   59.9909/0.02
+
