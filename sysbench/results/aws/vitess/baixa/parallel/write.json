@@ -1,0 +1,4442 @@
+[
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 16.99999999999919
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 16.99999999999919
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 16.68888888888938
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 16.68888888888938
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 16.68888888888938
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 16.61111111111194
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 16.61111111111194
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 16.61111111111194
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 16.03333333333569
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 16.03333333333569
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 16.03333333333569
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 16.633333333334633
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 16.633333333334633
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 16.633333333334633
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 25.57777777777828
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 25.57777777777828
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 25.57777777777828
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 54.23333333333277
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 54.23333333333277
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 54.23333333333277
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 81.83333333333293
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 81.83333333333293
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 81.83333333333293
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 99.98888888888865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 99.98888888888865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 99.98888888888865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 95.73333333333318
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 95.73333333333318
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 95.73333333333318
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 67.81111111110982
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 67.81111111110982
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 67.81111111110982
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 39.14444444444397
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 39.14444444444397
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 39.14444444444397
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 15.72222222222183
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 15.72222222222183
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 16.40000000000026
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 16.40000000000026
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 16.18888888888857
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 16.18888888888857
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 16.18888888888857
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 15.644444444444375
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 15.644444444444375
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 15.644444444444375
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 15.54444444444421
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 15.54444444444421
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 15.54444444444421
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 15.899999999999451
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 15.899999999999451
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 15.899999999999451
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 26.352627485835953
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 26.352627485835953
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 26.352627485835953
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 54.50909818036312
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 54.50909818036312
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 54.50909818036312
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 82.31111111111306
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 82.31111111111306
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 82.31111111111306
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 99.95558121974075
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 99.95558121974075
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 99.95558121974075
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 93.25420639683524
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 93.25420639683524
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 93.25420639683524
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 65.43333333333268
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 65.43333333333268
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 65.43333333333268
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 37.35684582712317
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 37.35684582712317
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 37.35684582712317
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 16.466666666666356
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "CPU Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 16.466666666666356
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 67.85986829089059
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 67.85986829089059
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 67.64243924301583
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 67.64243924301583
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 67.64243924301583
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 67.78062882822499
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 67.78062882822499
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 67.78062882822499
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 67.92108960822395
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 67.92108960822395
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 67.92108960822395
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 67.81434345310437
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 67.81434345310437
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 67.81434345310437
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 68.0393431502784
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 68.0393431502784
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 68.0393431502784
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 68.06397299599865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 68.06397299599865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 68.06397299599865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 68.68259598573891
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 68.68259598573891
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 68.68259598573891
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 69.00031090133122
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 69.00031090133122
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 69.00031090133122
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 68.89941938166974
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 68.89941938166974
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 68.89941938166974
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 68.96048928601711
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 68.96048928601711
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 68.96048928601711
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 69.2337392547251
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 69.2337392547251
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 69.2337392547251
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 69.14405229602652
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 69.14405229602652
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 68.09571925206022
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 68.09571925206022
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 68.09713243992942
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 68.09713243992942
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 68.09713243992942
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 68.21548692397454
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 68.21548692397454
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 68.21548692397454
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 68.31859916743046
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 68.31859916743046
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 68.31859916743046
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 68.61198706327448
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 68.61198706327448
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 68.61198706327448
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 68.74043574638526
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 68.74043574638526
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 68.74043574638526
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 69.23818070231398
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 69.23818070231398
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 69.23818070231398
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 69.49366488066639
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 69.49366488066639
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 69.49366488066639
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 69.80769541359972
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 69.80769541359972
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 69.80769541359972
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 69.85195847650272
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 69.85195847650272
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 69.85195847650272
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 70.28863352808408
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 70.28863352808408
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 70.28863352808408
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 70.14292376457098
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 70.14292376457098
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 70.14292376457098
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 70.41587090730698
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Memory Utilization (%)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 70.41587090730698
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 73181.86666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 73181.86666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 61531.022222222215
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 61531.022222222215
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 61531.022222222215
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 15928.888888888887
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 15928.888888888887
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 15928.888888888887
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 11923.91111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 11923.91111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 11923.91111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 11013.688888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 11013.688888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 11013.688888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 37865.24444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 37865.24444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 37865.24444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 73910.04444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 73910.04444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 73910.04444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 96301.5111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 96301.5111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 96301.5111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 75730.48888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 75730.48888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 75730.48888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 65809.06666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 65809.06666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 65809.06666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 44327.82222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 44327.82222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 44327.82222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 35407.644444444435
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 35407.644444444435
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 35407.644444444435
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 15200.71111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 15200.71111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 80918.75555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 80918.75555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 81009.77777777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 81009.77777777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 81009.77777777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 5370.31111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 5370.31111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 5370.31111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 4642.133333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 4642.133333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 4642.133333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 4551.11111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 4551.11111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 4551.11111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 8373.114098433507
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 8373.114098433507
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 8373.114098433507
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 46230.04288031282
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 46230.04288031282
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 46230.04288031282
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 60165.68888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 60165.68888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 60165.68888888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 53854.03988806467
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 53854.03988806467
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 53854.03988806467
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 19664.732946589316
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 19664.73294658932
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 19664.73294658932
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 5825.4222222222215
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 5825.4222222222215
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 5825.4222222222215
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 7468.9675109519885
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 7468.9675109519885
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 7468.9675109519885
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 9284.266666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Read Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 9284.266666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 175763.91111111108
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 175763.91111111108
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 170393.59999999998
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 170393.59999999998
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 170393.59999999998
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 33041.06666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 33041.06666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 33041.06666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 43872.7111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 43872.7111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 43872.7111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 51791.644444444435
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 51791.644444444435
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 51791.644444444435
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 2626810.3111111107
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 2626810.3111111107
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 2626810.3111111107
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 12690955.377777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 12690955.377777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 12690955.377777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 25092642.13333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 25092642.13333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 25092642.13333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 37091191.46666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 37091191.46666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 37091191.46666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 39976504.88888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 39976504.88888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 39976504.88888888
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 28020007.822222218
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 28020007.822222218
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 28020007.822222218
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 13502782.577777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 13502782.577777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 13502782.577777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 940259.5555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 940259.5555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 166752.7111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 166752.7111111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 147364.97777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 147364.97777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 147364.97777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 88746.66666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 88746.66666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 88746.66666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 103401.24444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 103401.24444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 103401.24444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 72999.82222222221
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 72999.82222222221
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 72999.82222222221
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 2629430.863237418
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 2629430.863237418
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 2629430.863237418
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 13299418.69403897
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 13299418.69403897
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 13299418.69403897
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 25054867.91111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 25054867.91111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 25054867.91111111
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 36463096.69968463
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 36463096.69968463
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 36463096.69968463
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 37662697.69509457
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 37662697.69509458
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 37662697.69509458
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 25906562.844444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 25906562.844444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 25906562.844444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 11976125.063932931
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 11976125.063932931
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 11976125.063932931
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 149003.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Disk Write Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 149003.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 201875.84444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 201875.84444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 188734.0222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 188734.0222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 188734.0222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 227985.97777777773
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 227985.97777777773
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 227985.97777777773
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 203794.35555555552
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 203794.35555555552
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 203794.35555555552
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 236410.2222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 236410.2222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 236410.2222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 462710.53333333327
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 462710.53333333327
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 462710.53333333327
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 1131702.1555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 1131702.1555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 1131702.1555555554
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 1771327.2888888887
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 1771327.2888888887
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 1771327.2888888887
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 2170616.8
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 2170616.8
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 2170616.8
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 2035408.3999999997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 2035408.3999999997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 2035408.3999999997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 1365405.7999999998
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 1365405.7999999998
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 1365405.7999999998
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 659672.4444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 659672.4444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 659672.4444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 144507.68888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 144507.68888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 169274.64444444442
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 169274.64444444442
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 163869.6222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 163869.6222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 163869.6222222222
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 149690.93333333332
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 149690.93333333332
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 149690.93333333332
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 143855.91111111108
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 143855.91111111108
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 143855.91111111108
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 148328.66666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 148328.66666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 148328.66666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 414574.40284412843
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 414574.40284412843
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 414574.40284412843
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 1024747.850429914
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 1024747.850429914
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 1024747.850429914
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 1668214.7333333332
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 1668214.7333333332
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 1668214.7333333332
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 2022176.5202327543
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 2022176.5202327543
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 2022176.5202327543
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 1900741.592762997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 1900741.5927629971
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 1900741.5927629971
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 1258772.2444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 1258772.2444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 1258772.2444444443
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 631304.2540416731
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 631304.2540416731
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 631304.2540416731
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 149163.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Receive Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 149163.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 274476.5333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 251967.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 251967.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 251967.37777777776
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 298138.4666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 298138.4666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 298138.4666666666
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 283175.2444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 283175.2444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 283175.2444444444
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 338312.39999999997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 338312.39999999997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 338312.39999999997
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 483392.99999999994
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 483392.99999999994
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 483392.99999999994
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 1157317.8666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 1157317.8666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 1157317.8666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 1795576.3156141017
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 1795576.3156141012
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 1795576.3156141012
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 2251192.2615610147
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 2251192.2615610147
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 2251192.2615610147
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 2187600.4888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 2187600.4888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 2187600.4888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 1493978.5029900183
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 1493978.5029900183
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 1493978.5029900183
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 777594.9797678865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 777594.9797678865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 777594.9797678865
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 161666.48888888885
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 161666.48888888885
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-3-194.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 161666.48888888885
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316047.0,
+    "value": 177593.1333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316052.0,
+    "value": 177593.1333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316057.0,
+    "value": 177593.1333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316062.0,
+    "value": 185803.46666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316067.0,
+    "value": 185803.46666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316072.0,
+    "value": 185803.46666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316077.0,
+    "value": 142967.7333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316082.0,
+    "value": 142967.7333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316087.0,
+    "value": 142967.7333333333
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316092.0,
+    "value": 184852.57777777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316097.0,
+    "value": 184852.57777777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316102.0,
+    "value": 184852.57777777777
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316107.0,
+    "value": 142146.08888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316112.0,
+    "value": 142146.08888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316117.0,
+    "value": 142146.08888888886
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316122.0,
+    "value": 758452.7627254153
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316127.0,
+    "value": 758452.7627254153
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316132.0,
+    "value": 758452.7627254153
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316137.0,
+    "value": 1348993.6666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316142.0,
+    "value": 1348993.6666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316147.0,
+    "value": 1348993.6666666665
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316152.0,
+    "value": 2037712.2453965924
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316157.0,
+    "value": 2037712.2453965924
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316162.0,
+    "value": 2037712.2453965924
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316167.0,
+    "value": 2092753.9802543805
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316172.0,
+    "value": 2092753.9802543805
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316177.0,
+    "value": 2092753.9802543805
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316182.0,
+    "value": 1699390.7555555555
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316187.0,
+    "value": 1699390.7555555555
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316192.0,
+    "value": 1699390.7555555555
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316197.0,
+    "value": 1010848.907267836
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316202.0,
+    "value": 1010848.907267836
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316207.0,
+    "value": 1010848.907267836
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316212.0,
+    "value": 384092.28888888884
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316217.0,
+    "value": 384092.28888888884
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316222.0,
+    "value": 384092.28888888884
+  },
+  {
+    "database": "vitess",
+    "test_type": "write",
+    "scale": "baixa",
+    "simultaneity": "paralelo",
+    "metric": "Network Transmit Throughput (B/s)",
+    "instance": "ip-10-0-4-163.ec2.internal",
+    "timestamp": 1768316227.0,
+    "value": 143697.64444444442
+  }
+]
