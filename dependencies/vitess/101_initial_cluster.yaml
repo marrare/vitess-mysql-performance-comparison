@@ -29,8 +29,8 @@ spec:
       replicas: 3
       resources:
         requests:
-          cpu: 100m
-          memory: 256Mi
+          cpu: 30m
+          memory: 128Mi
   vitessDashboard:
     cells:
     - zone1
@@ -39,7 +39,7 @@ spec:
     replicas: 1
     resources:
       requests:
-        cpu: 100m
+        cpu: 30m
         memory: 128Mi
   vtadmin:
     rbac:
@@ -53,11 +53,11 @@ spec:
     readOnly: false
     apiResources:
       requests:
-        cpu: 100m
+        cpu: 30m
         memory: 128Mi
     webResources:
       requests:
-        cpu: 100m
+        cpu: 30m
         memory: 128Mi
 
   keyspaces:
@@ -67,7 +67,7 @@ spec:
     vitessOrchestrator:
       resources:
         requests:
-          cpu: 100m
+          cpu: 30m
           memory: 128Mi
       extraFlags:
         instance-poll-time: 1s
@@ -87,13 +87,13 @@ spec:
                 db-charset: utf8mb4
               resources:
                 requests:
-                  cpu: 100m
-                  memory: 256Mi
+                  cpu: 30m
+                  memory: 128Mi
             mysqld:
               resources:
                 requests:
-                  cpu: 100m
-                  memory: 512Mi
+                  cpu: 30m
+                  memory: 128Mi
             dataVolumeClaimTemplate:
               accessModes: ["ReadWriteOnce"]
               resources:
