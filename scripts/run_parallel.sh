@@ -208,6 +208,7 @@ for file in "$OUT_DIR"/*; do
         --start "$START" \
         --end "$END" \
         --output "$OUT_DIR/${FILE_METRICS}.json"
+      	--prometheus_url "$PROMETHEUS_URL"
       wait
     fi
 done
