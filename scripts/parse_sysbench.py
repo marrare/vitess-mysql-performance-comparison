@@ -33,15 +33,15 @@ def parse_sysbench_log(file_path, db_type, test_type, scale, simultaneity, times
             if match_threads: data["threads"] = match_threads.group(1)
 
             # 2. Total Time
-            match_time = re.search(r"total time:\s+([\d\.]+)s", content)
+            match_time = re.search(r"time elapsed:\s+([\d\.]+)s", content)
             if match_time: data["total_time"] = match_time.group(1)
 
-            # 3. TPS (Transactions per sec)
-            match_tps = re.search(r"transactions:.*\(([\d\.]+) per sec\.\)", content)
+            # 3. TPS
+            match_tps = re.search(r"transactions:\s+(\d+)", content)
             if match_tps: data["tps"] = match_tps.group(1)
 
-            # 4. QPS (Queries per sec)
-            match_qps = re.search(r"queries:.*\(([\d\.]+) per sec\.\)", content)
+            # 4. QPS 
+            match_qps = re.search(r"queries:\s+(\d+)", content)
             if match_qps: data["qps"] = match_qps.group(1)
 
             # 5. Latencies (min, avg, max, 95th)
