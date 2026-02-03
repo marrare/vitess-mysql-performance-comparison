@@ -85,6 +85,9 @@ spec:
             vttablet:
               extraFlags:
                 db-charset: utf8mb4
+                query-server-config-transaction-cap: "100"
+                query-server-config-pool-size: "100"
+                queryserver-config-query-timeout: "60s"
               resources:
                 requests:
                   cpu: 30m

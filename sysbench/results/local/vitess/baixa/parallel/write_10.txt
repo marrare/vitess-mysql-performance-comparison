@@ -1,0 +1,17 @@
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 50
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008091360: ended at 2026-02-03 01:14:33.643 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'BEGIN'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:405: SQL error, errno = 1317, state = '70100': target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008091360: ended at 2026-02-03 01:14:33.643 UTC (exceeded timeout: 30s) (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.-33.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076827567179150: ended at 2026-02-03 01:14:56.613 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'BEGIN'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:405: SQL error, errno = 1317, state = '70100': target: benchmark.-33.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076827567179150: ended at 2026-02-03 01:14:56.613 UTC (exceeded timeout: 30s) (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.99-cc.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076840914452849: ended at 2026-02-03 01:14:58.351 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'COMMIT'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:409: SQL error, errno = 1317, state = '70100': target: benchmark.99-cc.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076840914452849: ended at 2026-02-03 01:14:58.351 UTC (exceeded timeout: 30s) (CallerID: user)

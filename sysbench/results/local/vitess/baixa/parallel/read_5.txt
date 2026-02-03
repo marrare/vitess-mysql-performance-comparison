@@ -9,29 +9,15 @@ Initializing worker threads...
 
 Threads started!
 
-SQL statistics:
-    queries performed:
-        read:                            13832
-        write:                           0
-        other:                           1976
-        total:                           15808
-    transactions:                        988    (15.86 per sec.)
-    queries:                             15808  (253.70 per sec.)
-    ignored errors:                      0      (0.00 per sec.)
-    reconnects:                          0      (0.00 per sec.)
-
-General statistics:
-    total time:                          62.2903s
-    total number of events:              988
-
-Latency (ms):
-         min:                                 1925.15
-         avg:                                 3103.18
-         max:                                 4339.99
-         95th percentile:                     3911.79
-         sum:                              3065940.10
-
-Threads fairness:
-    events (avg/stddev):           19.7600/0.47
-    execution time (avg/stddev):   61.3188/0.73
-
+FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest7 WHERE id=?'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest4 WHERE id BETWEEN ? AND ?'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:432: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)

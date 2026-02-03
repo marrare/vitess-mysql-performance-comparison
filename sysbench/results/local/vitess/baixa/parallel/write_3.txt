@@ -9,29 +9,5 @@ Initializing worker threads...
 
 Threads started!
 
-SQL statistics:
-    queries performed:
-        read:                            0
-        write:                           3329
-        other:                           2215
-        total:                           5544
-    transactions:                        923    (14.79 per sec.)
-    queries:                             5544   (88.82 per sec.)
-    ignored errors:                      6      (0.10 per sec.)
-    reconnects:                          0      (0.00 per sec.)
-
-General statistics:
-    total time:                          62.4154s
-    total number of events:              923
-
-Latency (ms):
-         min:                                  389.66
-         avg:                                 3301.78
-         max:                                31928.92
-         95th percentile:                    13797.01
-         sum:                              3047545.05
-
-Threads fairness:
-    events (avg/stddev):           18.4600/4.36
-    execution time (avg/stddev):   60.9509/0.72
-
+FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008090744: ended at 2026-02-03 01:14:30.638 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'COMMIT'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:409: SQL error, errno = 1317, state = '70100': target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008090744: ended at 2026-02-03 01:14:30.638 UTC (exceeded timeout: 30s) (CallerID: user)

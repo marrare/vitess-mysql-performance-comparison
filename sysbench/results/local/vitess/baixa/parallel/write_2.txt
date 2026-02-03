@@ -9,29 +9,7 @@ Initializing worker threads...
 
 Threads started!
 
-SQL statistics:
-    queries performed:
-        read:                            0
-        write:                           2900
-        other:                           2273
-        total:                           5173
-    transactions:                        860    (13.76 per sec.)
-    queries:                             5173   (82.79 per sec.)
-    ignored errors:                      13     (0.21 per sec.)
-    reconnects:                          0      (0.00 per sec.)
-
-General statistics:
-    total time:                          62.4797s
-    total number of events:              860
-
-Latency (ms):
-         min:                                  384.28
-         avg:                                 3549.69
-         max:                                32499.09
-         95th percentile:                    14827.42
-         sum:                              3052729.75
-
-Threads fairness:
-    events (avg/stddev):           17.2000/3.46
-    execution time (avg/stddev):   61.0546/0.71
-
+FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.cc-.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076839750121184: ended at 2026-02-03 01:14:36.992 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'COMMIT'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:409: SQL error, errno = 1317, state = '70100': target: benchmark.cc-.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076839750121184: ended at 2026-02-03 01:14:36.992 UTC (exceeded timeout: 30s) (CallerID: user)
+FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.-33.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076827567177845: ended at 2026-02-03 01:14:35.603 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'COMMIT'
+FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:409: SQL error, errno = 1317, state = '70100': target: benchmark.-33.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076827567177845: ended at 2026-02-03 01:14:35.603 UTC (exceeded timeout: 30s) (CallerID: user)

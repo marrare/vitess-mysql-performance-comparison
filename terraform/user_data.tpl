@@ -6,9 +6,6 @@ exec > >(tee -a "$LOG_FILE") 2>&1
 
 echo "[user-data] Boot at $(date -Is)"
 
-# ==========================
-# Packages (Ubuntu ARM64)
-# ==========================
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
 apt-get install -y \
@@ -33,6 +30,7 @@ apt-get install -y \
 
 export LDFLAGS=-L/usr/local/opt/openssl/lib 
 
+
 git clone https://github.com/akopytov/sysbench.git
 
 cd sysbench
@@ -41,38 +39,26 @@ cd sysbench
 make -j
 make install
 
-# ==========================
-# Env vars file
-# ==========================
-mkdir -p /etc/sysbench
-chmod 700 /etc/sysbench
 
-# Helper env file for benchmarks
-cat >/etc/sysbench/benchmark.env <<EOF
-# --------------------------
-# MySQL Standalone
-# --------------------------
-MYSQL_HOST=${mysql_host}
-MYSQL_PORT=3306
-MYSQL_USER=userbench
-MYSQL_PASSWORD=password
-MYSQL_DATABASE=benchmark
+wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/arm64/latest/amazon-cloudwatch-agent.deb
+dpkg -i -E ./amazon-cloudwatch-agent.deb
+
+cat >/opt/aws/amazon-cloudwatch-agent/bin/config.json <<'EOF'
+{
+    "metrics": {
+        "metrics_collected": {
+            "mem": {
+                "measurement": [
+                    "mem_used_percent"
+                ],
+                "metrics_collection_interval": 60
+            }
+        },
+        "append_dimensions": {
+            "InstanceId": "${aws:InstanceId}"
+        }
+    }
+}
 EOF
 
-chmod 600 /etc/sysbench/benchmark.env
-
-# ==========================
-# Helper for interactive shell
-# ==========================
-cat >/etc/profile.d/benchmark_env.sh <<'EOF'
-# Load benchmark env vars:
-#   source /etc/sysbench/benchmark.env
-EOF
-chmod 644 /etc/profile.d/benchmark_env.sh
-
-echo "[user-data] Wrote env file: /etc/sysbench/benchmark.env"
-echo "[user-data] Usage:"
-echo "  source /etc/sysbench/benchmark.env"
-echo "  ENGINE=vitess SCALE=alta ./run_parallel.sh | ./run_sequencial.sh"
-
-echo "[user-data] Done at $(date -Is)"
+/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
