@@ -9,7 +9,29 @@ Initializing worker threads...
 
 Threads started!
 
-FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008091619: ended at 2026-02-03 01:14:36.648 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'BEGIN'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:405: SQL error, errno = 1317, state = '70100': target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008091619: ended at 2026-02-03 01:14:36.648 UTC (exceeded timeout: 30s) (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008092953: ended at 2026-02-03 01:14:57.655 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'COMMIT'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:409: SQL error, errno = 1317, state = '70100': target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008092953: ended at 2026-02-03 01:14:57.655 UTC (exceeded timeout: 30s) (CallerID: user)
+SQL statistics:
+    queries performed:
+        read:                            0
+        write:                           5231
+        other:                           3187
+        total:                           8418
+    transactions:                        1403   (22.42 per sec.)
+    queries:                             8418   (134.53 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          62.5633s
+    total number of events:              1403
+
+Latency (ms):
+         min:                                  299.23
+         avg:                                 2177.94
+         max:                                 6043.53
+         95th percentile:                     4128.91
+         sum:                              3055651.47
+
+Threads fairness:
+    events (avg/stddev):           28.0600/1.29
+    execution time (avg/stddev):   61.1130/0.77
+

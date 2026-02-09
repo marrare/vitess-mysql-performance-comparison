@@ -1,0 +1,185 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-standalone-secret
+  namespace: vitess
+type: Opaque
+stringData:
+  MYSQL_ROOT_PASSWORD: "password"
+  MYSQL_DATABASE: "benchmark"
+  MYSQL_USER: "userbench"
+  MYSQL_PASSWORD: "password"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-standalone-config
+  namespace: vitess
+data:
+  my.cnf: |
+    [mysqld]
+    # ===== Identidade / Básico =====
+    bind-address = 0.0.0.0
+    mysqlx = 0
+    skip-name-resolve = ON
+
+    # ===== Conexões / Sysbench =====
+    max_connections = 2000
+    max_prepared_stmt_count = 200000
+    table_open_cache = 4000
+    open_files_limit = 65535
+
+    # ===== Timeouts =====
+    wait_timeout = 28800
+    interactive_timeout = 28800
+    connect_timeout = 10
+    net_read_timeout = 120
+    net_write_timeout = 120
+    max_execution_time = 0
+
+    # ===== InnoDB (OLTP) =====
+    default_storage_engine = InnoDB
+    innodb_buffer_pool_size = 1G
+    innodb_buffer_pool_instances = 1
+    innodb_log_file_size = 256M
+    innodb_flush_method = O_DIRECT
+    innodb_flush_log_at_trx_commit = 1
+    innodb_lock_wait_timeout = 60
+
+    # Ajustes comuns pra benchmark (opcionais):
+    # innodb_flush_log_at_trx_commit = 2   # menos durável, mais rápido
+    # sync_binlog = 0                     # menos durável, mais rápido (se binlog ligado)
+
+    # ===== Binlog (desligado por padrão em standalone de benchmark) =====
+    skip-log-bin
+
+    # ===== Charset/Collation =====
+    character-set-server = utf8mb4
+    collation-server = utf8mb4_0900_ai_ci
+
+    # ===== Logs =====
+    log_error_verbosity = 2
+    slow_query_log = OFF
+
+    [client]
+    default-character-set = utf8mb4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-standalone-pvc
+  namespace: vitess
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  # Se seu cluster tiver StorageClass default, pode omitir.
+  # storageClassName: standard
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-standalone
+  namespace: vitess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-standalone
+  template:
+    metadata:
+      labels:
+        app: mysql-standalone
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:8.4
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: mysql
+              containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-standalone-secret
+                  key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-standalone-secret
+                  key: MYSQL_DATABASE
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-standalone-secret
+                  key: MYSQL_USER
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-standalone-secret
+                  key: MYSQL_PASSWORD
+
+          # Recursos: ajuste conforme o "budget" do seu benchmark
+          resources:
+            requests:
+              cpu: "120m"
+              memory: "512Mi"
+
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+            # MySQL lê automaticamente /etc/mysql/conf.d/*.cnf
+            - name: mysql-config
+              mountPath: /etc/mysql/conf.d/my.cnf
+              subPath: my.cnf
+              readOnly: true
+
+          readinessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "mysqladmin ping -h 127.0.0.1 -uroot -p$MYSQL_ROOT_PASSWORD --silent"
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 12
+
+          livenessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "mysqladmin ping -h 127.0.0.1 -uroot -p$MYSQL_ROOT_PASSWORD --silent"
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 6
+
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: mysql-standalone-pvc
+        - name: mysql-config
+          configMap:
+            name: mysql-standalone-config
+            items:
+              - key: my.cnf
+                path: my.cnf
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-standalone
+  namespace: vitess
+spec:
+  selector:
+    app: mysql-standalone
+  ports:
+    - name: mysql
+      port: 3306
+      targetPort: 3306
+  type: ClusterIP

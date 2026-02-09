@@ -40,7 +40,7 @@ mkdir -p "$OUT_DIR"
 
 # prepare (cria e popula as tabelas)
 echo "Preparando o banco de dados..."
-sysbench oltp_read_write \
+sysbench oltp_read_only \
   --mysql-db=$DB \
   --mysql-host=$HOST \
   --mysql-password=$PASSWORD \
@@ -50,9 +50,12 @@ sysbench oltp_read_write \
   --table-size=$TABLE_SIZE \
   --auto_inc=false \
   --create_secondary=false \
+  --db-ps-mode=disable \
   prepare
 wait
 echo "Banco de dados preparado."
+
+sleep 120
 
 # read
 INITIALIZE_TIME=$(date --iso-8601=seconds)
@@ -68,8 +71,11 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
+  --rand-type=uniform \
   --auto_inc=false \
   --create_secondary=false \
+  --skip_trx=on \
+  --db-ps-mode=disable \
   run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado" &
 done
 wait
@@ -78,29 +84,30 @@ echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/read.txt"
 
 sleep 120
 
-# write
-INITIALIZE_TIME=$(date --iso-8601=seconds)
-for i in $(seq 1 $PARALLEL); do
-    echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste write_$i"
-    sysbench oltp_write_only \
-  --mysql-db=$DB \
-  --mysql-host=$HOST \
-  --mysql-password=$PASSWORD \
-  --mysql-port=$PORT \
-  --mysql-user=$USER \
-  --tables=10 \
-  --table-size=$TABLE_SIZE \
-  --threads=50 \
-  --time=60 \
-  --auto_inc=false \
-  --create_secondary=false \
-  run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado" &
-done
-wait
-FINALIZE_TIME=$(date --iso-8601=seconds)
-echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
+# # write
+# INITIALIZE_TIME=$(date --iso-8601=seconds)
+# for i in $(seq 1 $PARALLEL); do
+#     echo "$(date +"%Y-%m-%d %H:%M:%S"): Iniciando teste write_$i"
+#     sysbench oltp_write_only \
+#   --mysql-db=$DB \
+#   --mysql-host=$HOST \
+#   --mysql-password=$PASSWORD \
+#   --mysql-port=$PORT \
+#   --mysql-user=$USER \
+#   --tables=10 \
+#   --table-size=$TABLE_SIZE \
+#   --threads=50 \
+#   --time=60 \
+#   --rand-type=uniform \
+#   --auto_inc=false \
+#   --create_secondary=false \
+#   run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado" &
+# done
+# wait
+# FINALIZE_TIME=$(date --iso-8601=seconds)
+# echo -e "Start: $INITIALIZE_TIME\nEnd: $FINALIZE_TIME" >> "$OUT_DIR/write.txt"
 
-sleep 120
+# sleep 120
 
 # # update
 # INITIALIZE_TIME=$(date --iso-8601=seconds)
@@ -116,6 +123,7 @@ sleep 120
 #   --table-size=$TABLE_SIZE \
 #   --threads=50 \
 #   --time=60 \
+#   --rand-type=uniform \
 #   --auto_inc=false \
 #   --create_secondary=false \
 #   run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado" &
@@ -140,6 +148,7 @@ sleep 120
 #   --table-size=$TABLE_SIZE \
 #   --threads=50 \
 #   --time=60 \
+#   --rand-type=uniform \
 #   run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado" &
 # done
 # wait

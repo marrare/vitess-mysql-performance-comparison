@@ -9,17 +9,29 @@ Initializing worker threads...
 
 Threads started!
 
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest8 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest8 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest7 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest4 WHERE id BETWEEN ? AND ?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:432: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+SQL statistics:
+    queries performed:
+        read:                            16814
+        write:                           0
+        other:                           0
+        total:                           16814
+    transactions:                        1201   (19.44 per sec.)
+    queries:                             16814  (272.17 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          61.7720s
+    total number of events:              1201
+
+Latency (ms):
+         min:                                 1344.17
+         avg:                                 2542.29
+         max:                                 3292.82
+         95th percentile:                     2932.60
+         sum:                              3053285.19
+
+Threads fairness:
+    events (avg/stddev):           24.0200/0.58
+    execution time (avg/stddev):   61.0657/0.63
+

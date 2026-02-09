@@ -9,21 +9,29 @@ Initializing worker threads...
 
 Threads started!
 
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest8 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.66-99.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.66-99.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest7 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest8 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+SQL statistics:
+    queries performed:
+        read:                            16786
+        write:                           0
+        other:                           0
+        total:                           16786
+    transactions:                        1199   (19.42 per sec.)
+    queries:                             16786  (271.81 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          61.7517s
+    total number of events:              1199
+
+Latency (ms):
+         min:                                 1668.43
+         avg:                                 2548.30
+         max:                                 3329.18
+         95th percentile:                     2932.60
+         sum:                              3055417.48
+
+Threads fairness:
+    events (avg/stddev):           23.9800/0.47
+    execution time (avg/stddev):   61.1083/0.48
+

@@ -9,9 +9,29 @@ Initializing worker threads...
 
 Threads started!
 
-FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008091360: ended at 2026-02-03 01:14:33.643 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'BEGIN'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:405: SQL error, errno = 1317, state = '70100': target: benchmark.33-66.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076842008091360: ended at 2026-02-03 01:14:33.643 UTC (exceeded timeout: 30s) (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.-33.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076827567179150: ended at 2026-02-03 01:14:56.613 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'BEGIN'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:405: SQL error, errno = 1317, state = '70100': target: benchmark.-33.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076827567179150: ended at 2026-02-03 01:14:56.613 UTC (exceeded timeout: 30s) (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1317 (target: benchmark.99-cc.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076840914452849: ended at 2026-02-03 01:14:58.351 UTC (exceeded timeout: 30s) (CallerID: user)) for query 'COMMIT'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:409: SQL error, errno = 1317, state = '70100': target: benchmark.99-cc.primary: vttablet: rpc error: code = Aborted desc = transaction 1770076840914452849: ended at 2026-02-03 01:14:58.351 UTC (exceeded timeout: 30s) (CallerID: user)
+SQL statistics:
+    queries performed:
+        read:                            0
+        write:                           3028
+        other:                           3008
+        total:                           6036
+    transactions:                        1006   (16.09 per sec.)
+    queries:                             6036   (96.52 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          62.5263s
+    total number of events:              1006
+
+Latency (ms):
+         min:                                  628.49
+         avg:                                 3038.17
+         max:                                21124.29
+         95th percentile:                     6247.39
+         sum:                              3056403.39
+
+Threads fairness:
+    events (avg/stddev):           20.1200/2.30
+    execution time (avg/stddev):   61.1281/0.69
+

@@ -9,15 +9,29 @@ Initializing worker threads...
 
 Threads started!
 
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest7 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest5 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest4 WHERE id BETWEEN ? AND ?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:432: SQL error, errno = 1203, state = '42000': target: benchmark.33-66.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
-FATAL: mysql_stmt_execute() returned error 1203 (target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)) for query 'SELECT c FROM sbtest3 WHERE id=?'
-FATAL: `thread_run' function failed: /usr/share/sysbench/oltp_common.lua:419: SQL error, errno = 1203, state = '42000': target: benchmark.99-cc.primary: vttablet: rpc error: code = ResourceExhausted desc = transaction pool connection limit exceeded (CallerID: user)
+SQL statistics:
+    queries performed:
+        read:                            16730
+        write:                           0
+        other:                           0
+        total:                           16730
+    transactions:                        1195   (19.35 per sec.)
+    queries:                             16730  (270.86 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          61.7618s
+    total number of events:              1195
+
+Latency (ms):
+         min:                                 1714.90
+         avg:                                 2553.32
+         max:                                 3288.47
+         95th percentile:                     2932.60
+         sum:                              3051215.02
+
+Threads fairness:
+    events (avg/stddev):           23.9000/0.36
+    execution time (avg/stddev):   61.0243/0.49
+

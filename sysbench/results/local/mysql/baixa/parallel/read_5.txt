@@ -11,27 +11,27 @@ Threads started!
 
 SQL statistics:
     queries performed:
-        read:                            191142
+        read:                            44114
         write:                           0
-        other:                           27306
-        total:                           218448
-    transactions:                        13653  (227.02 per sec.)
-    queries:                             218448 (3632.35 per sec.)
+        other:                           0
+        total:                           44114
+    transactions:                        3151   (51.92 per sec.)
+    queries:                             44114  (726.83 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
 General statistics:
-    total time:                          60.1362s
-    total number of events:              13653
+    total time:                          60.6873s
+    total number of events:              3151
 
 Latency (ms):
-         min:                                   10.55
-         avg:                                  219.84
-         max:                                 1269.17
-         95th percentile:                      539.71
-         sum:                              3001517.50
+         min:                                  687.66
+         avg:                                  956.67
+         max:                                 1529.52
+         95th percentile:                     1129.24
+         sum:                              3014470.43
 
 Threads fairness:
-    events (avg/stddev):           273.0600/31.07
-    execution time (avg/stddev):   60.0303/0.03
+    events (avg/stddev):           63.0200/0.32
+    execution time (avg/stddev):   60.2894/0.17
 

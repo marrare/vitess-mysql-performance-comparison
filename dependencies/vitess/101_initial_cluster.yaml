@@ -29,8 +29,9 @@ spec:
       replicas: 3
       resources:
         requests:
-          cpu: 30m
-          memory: 128Mi
+          cpu: 120m
+          memory: 512Mi
+
   vitessDashboard:
     cells:
     - zone1
@@ -85,18 +86,21 @@ spec:
             vttablet:
               extraFlags:
                 db-charset: utf8mb4
-                query-server-config-transaction-cap: "100"
-                query-server-config-pool-size: "100"
-                queryserver-config-query-timeout: "60s"
+                queryserver-config-transaction-cap: "100"
+                queryserver-config-pool-size: "100"
+                queryserver-config-query-timeout: "5m"
+                queryserver-config-txpool-timeout: "60s"
+                queryserver-config-txpool-max-idle-count: "100"
+                queryserver-config-transaction-timeout: "120s"
               resources:
                 requests:
-                  cpu: 30m
-                  memory: 128Mi
+                  cpu: 120m
+                  memory: 512Mi
             mysqld:
               resources:
                 requests:
-                  cpu: 30m
-                  memory: 128Mi
+                  cpu: 120m
+                  memory: 512Mi
             dataVolumeClaimTemplate:
               accessModes: ["ReadWriteOnce"]
               resources:
@@ -231,3 +235,6 @@ spec:
     - name: mysql
       port: 3306
       targetPort: 3306
+
+
+
