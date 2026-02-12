@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -12,27 +12,26 @@ Threads started!
 SQL statistics:
     queries performed:
         read:                            0
-        write:                           2990
-        other:                           13970
-        total:                           16960
-    transactions:                        16960  (280.00 per sec.)
-    queries:                             16960  (280.00 per sec.)
+        write:                           1452
+        other:                           19480
+        total:                           20932
+    transactions:                        20932  (347.26 per sec.)
+    queries:                             20932  (347.26 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      279.9953
-    time elapsed:                        60.5724s
-    total number of events:              16960
+General statistics:
+    total time:                          60.2683s
+    total number of events:              20932
 
 Latency (ms):
-         min:                                    1.18
-         avg:                                  177.57
-         max:                                 1455.69
-         95th percentile:                      549.52
-         sum:                              3011608.09
+         min:                                    1.38
+         avg:                                  143.57
+         max:                                 1091.73
+         95th percentile:                      404.61
+         sum:                              3005164.48
 
 Threads fairness:
-    events (avg/stddev):           339.2000/23.56
-    execution time (avg/stddev):   60.2322/0.17
+    events (avg/stddev):           418.6400/23.12
+    execution time (avg/stddev):   60.1033/0.08
 

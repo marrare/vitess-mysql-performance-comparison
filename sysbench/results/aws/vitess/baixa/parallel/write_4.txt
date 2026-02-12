@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -12,27 +12,26 @@ Threads started!
 SQL statistics:
     queries performed:
         read:                            0
-        write:                           9017
-        other:                           8623
-        total:                           17640
-    transactions:                        2940   (48.42 per sec.)
-    queries:                             17640  (290.52 per sec.)
+        write:                           8106
+        other:                           8028
+        total:                           16134
+    transactions:                        2689   (44.28 per sec.)
+    queries:                             16134  (265.70 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      48.4193
-    time elapsed:                        60.7196s
-    total number of events:              2940
+General statistics:
+    total time:                          60.7178s
+    total number of events:              2689
 
 Latency (ms):
-         min:                                   30.69
-         avg:                                 1026.71
-         max:                                 4564.37
-         95th percentile:                     1903.57
-         sum:                              3018530.80
+         min:                                  151.53
+         avg:                                 1123.29
+         max:                                 2428.67
+         95th percentile:                     1678.14
+         sum:                              3020532.54
 
 Threads fairness:
-    events (avg/stddev):           58.8000/4.72
-    execution time (avg/stddev):   60.3706/0.19
+    events (avg/stddev):           53.7800/2.05
+    execution time (avg/stddev):   60.4107/0.19
 

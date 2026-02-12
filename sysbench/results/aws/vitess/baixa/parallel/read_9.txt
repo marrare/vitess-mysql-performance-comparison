@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -11,28 +11,27 @@ Threads started!
 
 SQL statistics:
     queries performed:
-        read:                            13146
+        read:                            15904
         write:                           0
-        other:                           1878
-        total:                           15024
-    transactions:                        939    (15.13 per sec.)
-    queries:                             15024  (242.03 per sec.)
+        other:                           0
+        total:                           15904
+    transactions:                        1136   (18.27 per sec.)
+    queries:                             15904  (255.75 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      15.1266
-    time elapsed:                        62.0759s
-    total number of events:              939
+General statistics:
+    total time:                          62.1781s
+    total number of events:              1136
 
 Latency (ms):
-         min:                                 1686.97
-         avg:                                 3272.56
-         max:                                 4958.25
-         95th percentile:                     4128.91
-         sum:                              3072936.17
+         min:                                  591.06
+         avg:                                 2700.41
+         max:                                 5958.10
+         95th percentile:                     4437.27
+         sum:                              3067661.66
 
 Threads fairness:
-    events (avg/stddev):           18.7800/1.15
-    execution time (avg/stddev):   61.4587/0.64
+    events (avg/stddev):           22.7200/10.62
+    execution time (avg/stddev):   61.3532/0.60
 
