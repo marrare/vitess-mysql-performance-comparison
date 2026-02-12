@@ -123,9 +123,9 @@ for i in $(seq 1 $PARALLEL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  --rand-type=uniform \
   --auto_inc=false \
   --create_secondary=false \
+  --rand-type=uniform \
   run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado" &
 done
 wait

@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -12,27 +12,26 @@ Threads started!
 SQL statistics:
     queries performed:
         read:                            0
-        write:                           76444
-        other:                           38222
-        total:                           114666
-    transactions:                        19111  (317.92 per sec.)
-    queries:                             114666 (1907.50 per sec.)
+        write:                           79636
+        other:                           39818
+        total:                           119454
+    transactions:                        19909  (331.29 per sec.)
+    queries:                             119454 (1987.76 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      317.9169
-    time elapsed:                        60.1132s
-    total number of events:              19111
+General statistics:
+    total time:                          60.0936s
+    total number of events:              19909
 
 Latency (ms):
-         min:                                   13.97
-         avg:                                  157.13
-         max:                                  631.25
-         95th percentile:                      277.21
-         sum:                              3002932.78
+         min:                                   12.97
+         avg:                                  150.81
+         max:                                  458.57
+         95th percentile:                      257.95
+         sum:                              3002466.10
 
 Threads fairness:
-    events (avg/stddev):           382.2200/37.17
-    execution time (avg/stddev):   60.0587/0.03
+    events (avg/stddev):           398.1800/20.90
+    execution time (avg/stddev):   60.0493/0.02
 

@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -11,28 +11,27 @@ Threads started!
 
 SQL statistics:
     queries performed:
-        read:                            112266
+        read:                            119154
         write:                           0
-        other:                           16038
-        total:                           128304
-    transactions:                        8019   (133.10 per sec.)
-    queries:                             128304 (2129.55 per sec.)
+        other:                           0
+        total:                           119154
+    transactions:                        8511   (141.18 per sec.)
+    queries:                             119154 (1976.53 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      133.0967
-    time elapsed:                        60.2494s
-    total number of events:              8019
+General statistics:
+    total time:                          60.2831s
+    total number of events:              8511
 
 Latency (ms):
-         min:                                  162.14
-         avg:                                  375.01
-         max:                                  760.94
-         95th percentile:                      530.08
-         sum:                              3007208.86
+         min:                                   86.07
+         avg:                                  353.38
+         max:                                 1038.72
+         95th percentile:                      612.21
+         sum:                              3007613.34
 
 Threads fairness:
-    events (avg/stddev):           160.3800/5.26
-    execution time (avg/stddev):   60.1442/0.07
+    events (avg/stddev):           170.2200/64.89
+    execution time (avg/stddev):   60.1523/0.09
 
