@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -12,27 +12,26 @@ Threads started!
 SQL statistics:
     queries performed:
         read:                            0
-        write:                           62153
-        other:                           0
-        total:                           62153
-    transactions:                        62153  (1032.64 per sec.)
-    queries:                             62153  (1032.64 per sec.)
+        write:                           35529
+        other:                           4205
+        total:                           39734
+    transactions:                        39734  (660.08 per sec.)
+    queries:                             39734  (660.08 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      1032.6400
-    time elapsed:                        60.1884s
-    total number of events:              62153
+General statistics:
+    total time:                          60.1951s
+    total number of events:              39734
 
 Latency (ms):
-         min:                                    3.26
-         avg:                                   48.32
-         max:                                  406.79
-         95th percentile:                      114.72
-         sum:                              3002966.52
+         min:                                    1.74
+         avg:                                   75.55
+         max:                                  508.71
+         95th percentile:                      176.73
+         sum:                              3001891.61
 
 Threads fairness:
-    events (avg/stddev):           1243.0600/46.77
-    execution time (avg/stddev):   60.0593/0.05
+    events (avg/stddev):           794.6800/21.01
+    execution time (avg/stddev):   60.0378/0.04
 

@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -11,28 +11,27 @@ Threads started!
 
 SQL statistics:
     queries performed:
-        read:                            93870
+        read:                            61068
         write:                           0
-        other:                           13410
-        total:                           107280
-    transactions:                        6705   (111.18 per sec.)
-    queries:                             107280 (1778.91 per sec.)
+        other:                           0
+        total:                           61068
+    transactions:                        4362   (71.94 per sec.)
+    queries:                             61068  (1007.15 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      111.1817
-    time elapsed:                        60.3067s
-    total number of events:              6705
+General statistics:
+    total time:                          60.6330s
+    total number of events:              4362
 
 Latency (ms):
-         min:                                  179.25
-         avg:                                  448.64
-         max:                                  970.72
-         95th percentile:                      657.93
-         sum:                              3008142.74
+         min:                                  154.18
+         avg:                                  690.88
+         max:                                 1876.42
+         95th percentile:                     1032.01
+         sum:                              3013626.35
 
 Threads fairness:
-    events (avg/stddev):           134.1000/20.00
-    execution time (avg/stddev):   60.1629/0.08
+    events (avg/stddev):           87.2400/10.78
+    execution time (avg/stddev):   60.2725/0.19
 
