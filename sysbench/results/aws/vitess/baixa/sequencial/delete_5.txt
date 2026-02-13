@@ -1,4 +1,4 @@
-sysbench 1.1.0-3ceba0b (using bundled LuaJIT 2.1.0-beta3)
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
 Number of threads: 50
@@ -12,27 +12,26 @@ Threads started!
 SQL statistics:
     queries performed:
         read:                            0
-        write:                           259
-        other:                           213106
-        total:                           213365
-    transactions:                        213365 (3555.26 per sec.)
-    queries:                             213365 (3555.26 per sec.)
+        write:                           170
+        other:                           219917
+        total:                           220087
+    transactions:                        220087 (3666.86 per sec.)
+    queries:                             220087 (3666.86 per sec.)
     ignored errors:                      0      (0.00 per sec.)
     reconnects:                          0      (0.00 per sec.)
 
-Throughput:
-    events/s (eps):                      3555.2583
-    time elapsed:                        60.0139s
-    total number of events:              213365
+General statistics:
+    total time:                          60.0197s
+    total number of events:              220087
 
 Latency (ms):
-         min:                                    0.97
-         avg:                                   14.06
-         max:                                  236.11
-         95th percentile:                       33.72
-         sum:                              3000210.00
+         min:                                    0.95
+         avg:                                   13.63
+         max:                                  188.81
+         95th percentile:                       32.53
+         sum:                              3000340.47
 
 Threads fairness:
-    events (avg/stddev):           4267.3000/383.09
-    execution time (avg/stddev):   60.0042/0.00
+    events (avg/stddev):           4401.7400/677.42
+    execution time (avg/stddev):   60.0068/0.01
 

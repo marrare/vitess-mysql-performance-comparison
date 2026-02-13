@@ -9,7 +9,7 @@ echo "SCALE: $SCALE"
 echo "ENVIRONMENT: $ENVIRONMENT"
 SEQUENCIAL=10
 
-./run_cleanup.sh
+# ./run_cleanup.sh
 
 case "$ENGINE" in
   mysql)
@@ -40,7 +40,7 @@ mkdir -p "$OUT_DIR"
 
 # prepare (cria e popula as tabelas)
 echo "Preparando o banco de dados..."
-sysbench oltp_read_write \
+sysbench oltp_read_only \
   --mysql-db=$DB \
   --mysql-host=$HOST \
   --mysql-password=$PASSWORD \
@@ -50,6 +50,7 @@ sysbench oltp_read_write \
   --table-size=$TABLE_SIZE \
   --auto_inc=false \
   --create_secondary=false \
+  --db-ps-mode=disable \
   prepare
 wait
 echo "Banco de dados preparado."
@@ -70,6 +71,9 @@ for i in $(seq 1 $SEQUENCIAL); do
   --time=60 \
   --auto_inc=false \
   --create_secondary=false \
+  --rand-type=uniform \
+  --skip_trx=on \
+  --db-ps-mode=disable \
   run > "$OUT_DIR/read_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste read_$i finalizado"
 done
 wait
@@ -94,6 +98,7 @@ for i in $(seq 1 $SEQUENCIAL); do
   --time=60 \
   --auto_inc=false \
   --create_secondary=false \
+  --rand-type=uniform \
   run > "$OUT_DIR/write_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste write_$i finalizado"
 done
 wait
@@ -118,6 +123,7 @@ for i in $(seq 1 $SEQUENCIAL); do
   --time=60 \
   --auto_inc=false \
   --create_secondary=false \
+  --rand-type=uniform \
   run > "$OUT_DIR/update_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste update_$i finalizado"
 done
 wait
@@ -140,8 +146,7 @@ for i in $(seq 1 $SEQUENCIAL); do
   --table-size=$TABLE_SIZE \
   --threads=50 \
   --time=60 \
-  --auto_inc=false \
-  --create_secondary=false \
+  --rand-type=uniform \
   run > "$OUT_DIR/delete_$i.txt" 2>&1 && echo "$(date +"%Y-%m-%d %H:%M:%S"): Teste delete_$i finalizado"
 done
 wait
