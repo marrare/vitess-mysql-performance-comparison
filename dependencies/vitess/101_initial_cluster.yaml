@@ -9,14 +9,14 @@ metadata:
   namespace: vitess
 spec:
   images:
-    vtctld: vitess/lite:latest
-    vtadmin: vitess/vtadmin:latest
-    vtgate: vitess/lite:latest
-    vttablet: vitess/lite:latest
-    vtbackup: vitess/lite:latest
-    vtorc: vitess/lite:latest
+    vtctld: vitess/lite:v23.0.0
+    vtadmin: vitess/vtadmin:v23.0.0
+    vtgate: vitess/lite:v23.0.0
+    vttablet: vitess/lite:v23.0.0
+    vtbackup: vitess/lite:v23.0.0
+    vtorc: vitess/lite:v23.0.0
     mysqld:
-      mysql80Compatible: vitess/lite:latest
+      mysql80Compatible: vitess/lite:v23.0.0
     mysqldExporter: prom/mysqld-exporter:v0.14.0
   cells:
   - name: zone1
@@ -29,8 +29,8 @@ spec:
       replicas: 3
       resources:
         requests:
-          cpu: 120m
-          memory: 512Mi
+          cpu: 30m
+          memory: 128Mi
 
   vitessDashboard:
     cells:
@@ -85,6 +85,7 @@ spec:
             replicas: 2 # tablets by shard
             vttablet:
               extraFlags:
+                init_db_name_override: benchmark
                 db-charset: utf8mb4
                 queryserver-config-transaction-cap: "100"
                 queryserver-config-pool-size: "100"
@@ -94,13 +95,13 @@ spec:
                 queryserver-config-transaction-timeout: "120s"
               resources:
                 requests:
-                  cpu: 120m
-                  memory: 512Mi
+                  cpu: 30m
+                  memory: 128Mi
             mysqld:
               resources:
                 requests:
-                  cpu: 120m
-                  memory: 512Mi
+                  cpu: 30m
+                  memory: 128Mi
             dataVolumeClaimTemplate:
               accessModes: ["ReadWriteOnce"]
               resources:
