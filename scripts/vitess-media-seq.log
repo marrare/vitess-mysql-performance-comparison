@@ -104,9 +104,9 @@ Banco de dados preparado.
 2026-02-12 23:51:52: Iniciando teste delete_8
 2026-02-12 23:52:52: Teste delete_8 finalizado
 2026-02-12 23:52:52: Iniciando teste delete_9
-2026-02-12 23:48:32: Teste delete_9 finalizado
-2026-02-12 23:48:32: Iniciando teste delete_10
-2026-02-12 23:49:32: Teste delete_10 finalizado
+2026-02-12 23:53:52: Teste delete_9 finalizado
+2026-02-12 23:53:52: Iniciando teste delete_10
+2026-02-12 23:54:52: Teste delete_10 finalizado
 Iniciando processamento dos logs e métricas...
 [INFO] Resultado do teste delete_1 (vitess) processado.
 [INFO] Resultado do teste delete_10 (vitess) processado.
