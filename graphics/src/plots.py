@@ -49,6 +49,16 @@ def plot_multimetric_by_scenario(
         (qps_col, "QPS"),
     ]:
         color = metric_color["TPS"] if metric_label == "TPS" else metric_color["QPS"]
+        # Diferenciar visualmente TPS e QPS pois podem se sobrepor
+        if metric_label == "TPS":
+            lw = 2.5
+            ms = 6
+            zorder = 3
+        else:
+            lw = 1.5
+            ms = 4
+            zorder = 4  # QPS por cima, mas menor/mais fina
+
         for db in ["vitess", "mysql"]:
             d = data[data[db_col] == db].sort_values(x_col)
             ax_left.plot(
@@ -56,8 +66,10 @@ def plot_multimetric_by_scenario(
                 d[col].values,
                 color=color,
                 linestyle=linestyle_by_db.get(db, "-"),
+                linewidth=lw,
                 marker=marker_by_db.get(db, "o"),
-                markersize=3,
+                markersize=ms,
+                zorder=zorder,
                 label=f"{metric_label} — {db.capitalize()}",
             )
 
