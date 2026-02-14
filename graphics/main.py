@@ -8,7 +8,7 @@ def main():
     p = argparse.ArgumentParser(description="Gera figuras do estudo Vitess vs MySQL")
     p.add_argument("--data", default="data/resultados_agg.csv", help="Caminho do CSV agregado")
     p.add_argument("--out", default="figures", help="Pasta de saída das figuras")
-    p.add_argument("--workloads", default="read,write,complex",
+    p.add_argument("--workloads", default="read,write",
                    help="Lista separada por vírgula (ex: read,write)")
 
     apply_paper_style()
@@ -20,7 +20,7 @@ def main():
     figdir.mkdir(parents=True, exist_ok=True)
 
     scenarios = sorted(df["simultaneity"].unique())
-    test_bases = ["read", "write", "complex", "update", "delete"]
+    test_bases = ["read", "write", "update", "delete"]
 
     for tb in test_bases:
         for sc in scenarios:
