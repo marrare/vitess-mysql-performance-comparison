@@ -46,3 +46,7 @@ kube-prometheus/
 venv/
 __pycache__
 **/.venv/
+
+# Dumps
+dumps/**.tar.gz
+dumps/**.sql
