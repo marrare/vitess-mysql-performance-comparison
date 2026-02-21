@@ -39,21 +39,21 @@ OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}/sequencial"
 mkdir -p "$OUT_DIR"
 
 # prepare (cria e popula as tabelas)
-echo "Preparando o banco de dados..."
-sysbench oltp_read_only \
-  --mysql-db=$DB \
-  --mysql-host=$HOST \
-  --mysql-password=$PASSWORD \
-  --mysql-port=$PORT \
-  --mysql-user=$USER \
-  --tables=10 \
-  --table-size=$TABLE_SIZE \
-  --auto_inc=false \
-  --create_secondary=false \
-  --db-ps-mode=disable \
-  prepare
-wait
-echo "Banco de dados preparado."
+# echo "Preparando o banco de dados..."
+# sysbench oltp_read_only \
+#   --mysql-db=$DB \
+#   --mysql-host=$HOST \
+#   --mysql-password=$PASSWORD \
+#   --mysql-port=$PORT \
+#   --mysql-user=$USER \
+#   --tables=10 \
+#   --table-size=$TABLE_SIZE \
+#   --auto_inc=false \
+#   --create_secondary=false \
+#   --db-ps-mode=disable \
+#   prepare
+# wait
+# echo "Banco de dados preparado."
 
 # read
 INITIALIZE_TIME=$(date --iso-8601=seconds)
