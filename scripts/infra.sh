@@ -19,7 +19,7 @@ case "$ENVIRONMENT" in
 
     echo "***** INICIANDO AMBIENTE LOCAL COM MINIKUBE ****"
     minikube delete
-    minikube start --kubernetes-version=v1.32.2 --cpus=6 --memory=16g --disk-size=50g
+    minikube start --kubernetes-version=v1.34.0 --cpus=6 --memory=16g --disk-size=50g
     minikube addons disable metrics-server #Necessário para rodar kube-prometheus
     ;;
   aws)
