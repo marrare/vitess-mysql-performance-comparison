@@ -39,17 +39,17 @@ OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}/parallel"
 mkdir -p "$OUT_DIR"
 
 # restore dump
-echo "Restaurando o banco de dados..."
-DUMP_FILE="../dumps/sysbench_prepare_${SCALE}.tar.gz"
+#echo "Restaurando o banco de dados..."
+#DUMP_FILE="../dumps/sysbench_prepare_${SCALE}.tar.gz"
 
-if [ -f "$DUMP_FILE" ]; then
-    echo "Descompactando e importando $DUMP_FILE..."
-    tar -xOzf "$DUMP_FILE" | grep -v "^mysqldump: \[Warning\]" | mysql -h "$HOST" -P "$PORT" -u "$USER" -p"$PASSWORD" "$DB"
-    echo "Banco de dados restaurado."
-else
-    echo "ERRO: Arquivo de dump não encontrado: $DUMP_FILE"
-    exit 1
-fi
+#if [ -f "$DUMP_FILE" ]; then
+#    echo "Descompactando e importando $DUMP_FILE..."
+#    tar -xOzf "$DUMP_FILE" | grep -v "^mysqldump: \[Warning\]" | mysql -h "$HOST" -P "$PORT" -u "$USER" -p"$PASSWORD" "$DB"
+#    echo "Banco de dados restaurado."
+#else
+#    echo "ERRO: Arquivo de dump não encontrado: $DUMP_FILE"
+#    exit 1
+#fi
 
 # read
 INITIALIZE_TIME=$(date --iso-8601=seconds)
