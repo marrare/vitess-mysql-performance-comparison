@@ -32,6 +32,7 @@ case "$SCALE" in
   baixa) TABLE_SIZE=10000 ;;
   media) TABLE_SIZE=100000 ;;
   alta)  TABLE_SIZE=1000000 ;;
+  big)  TABLE_SIZE=10000000 ;;
 esac
 
 BENCHMARK_RESULTS=../sysbench/results
