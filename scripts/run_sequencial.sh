@@ -39,7 +39,7 @@ BENCHMARK_RESULTS=../sysbench/results
 OUT_DIR="${BENCHMARK_RESULTS}/${ENVIRONMENT}/${ENGINE}/${SCALE}/sequencial/re-test"
 mkdir -p "$OUT_DIR"
 
-prepare (cria e popula as tabelas)
+# prepare (cria e popula as tabelas)
 echo "Preparando o banco de dados..."
 sysbench oltp_read_only \
   --mysql-db=$DB \
