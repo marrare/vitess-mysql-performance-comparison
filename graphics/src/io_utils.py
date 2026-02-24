@@ -2,7 +2,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
-SCALES = ["baixa", "media", "alta"]
+SCALES = ["baixa", "media", "alta", "big"]
 METRIC_COLS = ["tps","qps","lat_min","lat_avg","lat_max","lat_95th"]
 
 def _clean_df(df: pd.DataFrame) -> pd.DataFrame:
