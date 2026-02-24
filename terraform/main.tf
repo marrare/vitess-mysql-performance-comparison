@@ -253,3 +253,30 @@ resource "aws_instance" "sysbench_client" {
     Name = "sysbench-client"
   }
 }
+
+resource "aws_instance" "sysbench_client2" {
+  ami           = "ami-00cabbfdcb933e759" 
+  instance_type = "c7g.medium"
+
+  subnet_id                   = module.vpc.public_subnets[0]
+  vpc_security_group_ids      = [aws_security_group.mysql_sg.id]
+  associate_public_ip_address = true
+
+  user_data_base64 = base64encode(templatefile("${path.module}/user_data.tpl", {
+    mysql_host  = local.mysql_host
+  }))
+
+  root_block_device {
+    volume_type = "gp3"
+    volume_size = 20
+    iops        = 3000
+    throughput  = 125
+    delete_on_termination = true
+  }
+
+  key_name = aws_key_pair.mysql_ssh_key.key_name
+
+  tags = {
+    Name = "sysbench-client2"
+  }
+}
