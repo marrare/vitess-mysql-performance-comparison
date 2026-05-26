@@ -77,6 +77,7 @@ def _aggregate(df: pd.DataFrame) -> pd.DataFrame:
 
 def prepare_agg(raw_path: Path, out_path: Path) -> pd.DataFrame:
     df_raw = pd.read_csv(raw_path)
+    df_raw = df_raw.drop_duplicates()
     df = _clean_df(df_raw)
     df_agg = _aggregate(df)
     out_path.parent.mkdir(parents=True, exist_ok=True)
