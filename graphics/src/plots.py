@@ -5,6 +5,73 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+DB_COLOR = {"vitess": "#1f77b4", "mysql": "#ff7f0e"}
+DB_LABEL = {"vitess": "Vitess", "mysql": "MySQL"}
+
+SCALE_LABEL = {
+    "baixa": "100K",
+    "media": "1M",
+    "alta": "10M",
+}
+SCALE_ORDER = ["baixa", "media", "alta"]
+
+
+def plot_single_metric(
+    df: pd.DataFrame,
+    test_base: str,
+    scenario: str,
+    metric_col: str,
+    metric_label: str,
+    y_label: str,
+    title: str,
+    outpath: Path,
+    x_col: str = "scale",
+    db_col: str = "database",
+    scenario_col: str = "simultaneity",
+    value_fmt: str = "{:.0f}",
+):
+    data = df[
+        (df["test_base"] == test_base)
+        & (df[scenario_col] == scenario)
+        & (df[x_col].isin(SCALE_ORDER))
+    ].copy()
+    if data.empty:
+        raise ValueError(
+            f"Sem dados para test_base='{test_base}', scenario='{scenario}'."
+        )
+
+    data[x_col] = pd.Categorical(data[x_col], categories=SCALE_ORDER, ordered=True)
+
+    fig, ax = plt.subplots(figsize=(7, 4.5))
+
+    for db in ["vitess", "mysql"]:
+        d = data[data[db_col] == db].sort_values(x_col)
+        if d.empty:
+            continue
+        x_labels = [SCALE_LABEL[s] for s in d[x_col].astype(str)]
+        ax.plot(
+            x_labels,
+            d[metric_col].values,
+            color=DB_COLOR[db],
+            linestyle="-",
+            linewidth=2.0,
+            marker="o",
+            markersize=6,
+            label=DB_LABEL[db],
+        )
+        annotate_points(ax, x_labels, d[metric_col].values, fmt=value_fmt, dy=6)
+
+    ax.set_xlabel("Tamanho da base (registros)")
+    ax.set_ylabel(y_label)
+    ax.set_title(title)
+    ax.legend(fontsize=9)
+
+    fig.tight_layout()
+    outpath.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(outpath, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+
 def plot_multimetric_by_scenario(
     df: pd.DataFrame,
     test_base: str,
